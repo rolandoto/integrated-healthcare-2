@@ -2,8 +2,99 @@
 
 import Link from 'next/link';
 import { Phone, Heart, Users, Award } from 'lucide-react';
+import Image from 'next/image';
+
+
+
+
+
+function ContactPage() {
+  return (
+    <div className="min-h-screen bg-[#e2d5c6] flex items-center justify-center px-10 py-20">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-16">
+
+        {/* LEFT — FORM */}
+        <div>
+          <h2 className="text-3xl font-serif mb-10 tracking-wide">
+            CONTACT US
+          </h2>
+
+          <div className="space-y-8">
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full border border-black/50 bg-transparent px-6 py-4 text-lg outline-none"
+            />
+
+            <input
+              type="email"
+              placeholder="Email*"
+              className="w-full border border-black/50 bg-transparent px-6 py-4 text-lg outline-none"
+            />
+
+            <textarea
+              rows={6}
+              placeholder="Please fill out the form below, and a member of our team will get back to you promptly."
+              className="w-full border border-black/50 bg-transparent px-6 py-4 text-lg outline-none resize-none"
+            />
+
+            <button className="w-full bg-black text-white py-5 text-lg tracking-wider hover:bg-neutral-800 transition">
+              Send
+            </button>
+
+            <p className="text-sm text-black/70 leading-relaxed text-center mt-6">
+              This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+            </p>
+          </div>
+        </div>
+
+        {/* RIGHT — INFO */}
+        <div className="text-black space-y-10">
+          <div>
+            <h3 className="text-3xl font-serif mb-4">
+              Better yet, see us in person!
+            </h3>
+
+            <div className="space-y-3 text-lg">
+              <p><strong>Main Phone:</strong> (786) 536-1701</p>
+              <p><strong>WhatsApp:</strong> (786) 893-4315</p>
+              <p><strong>Fax:</strong> (305) 847-2447</p>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xl font-serif">
+              We welcome you to visit any of our locations!
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-2xl font-serif mb-4">Hours</h4>
+            <ul className="space-y-2 text-lg">
+              <li><strong>Mon</strong> 09:00 am – 05:00 pm</li>
+              <li><strong>Tue</strong> 09:00 am – 05:00 pm</li>
+              <li><strong>Wed</strong> 09:00 am – 05:00 pm</li>
+              <li><strong>Thu</strong> 09:00 am – 05:00 pm</li>
+              <li><strong>Fri</strong> 09:00 am – 05:00 pm</li>
+              <li><strong>Sat</strong> 09:00 am – 12:00 pm</li>
+              <li><strong>Sun</strong> Closed</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  );
+}
+
 
 export default function Home() {
+   const images = [
+    "/home.webp",
+    "/home1.webp",
+    "/home2.webp",
+  ];
   return (
     <>
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-white overflow-hidden">
@@ -25,16 +116,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Medical Practice */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-6 text-primary-700">
               At Integrated Health Care Group We Focus on Treating The Whole Person, Not Just The Diagnosis
             </h2>
-            
             <div className="space-y-12">
-              {/* Our Medical Practice */}
               <div className="bg-gray-50 p-8 rounded-2xl">
                 <h3 className="font-display text-3xl font-bold mb-4 text-primary-700">Our Medical Practice</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -83,8 +171,6 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-
-              {/* Our Treatment Focus */}
               <div className="bg-primary-50 p-8 rounded-2xl">
                 <h3 className="font-display text-3xl font-bold mb-4 text-primary-700">Our Treatment Focus</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -148,8 +234,6 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-
-              {/* Our Patient Promise */}
               <div className="bg-accent-50 p-8 rounded-2xl">
                 <h3 className="font-display text-3xl font-bold mb-4 text-primary-700">Our Patient Promise</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -196,8 +280,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
       <section className="py-20 bg-primary-700 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -226,6 +308,22 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ContactPage/>
+        <section className="w-full h-[420px] grid grid-cols-3 overflow-hidden">
+      {images.map((src, index) => (
+        <div key={index} className="relative w-full h-full">
+          <Image
+            src={src}
+            alt="Location"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      ))}
+    </section>
+
+    
     </>
   );
 }

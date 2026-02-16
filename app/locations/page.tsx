@@ -1,4 +1,64 @@
 import { MapPin, Clock, Phone } from 'lucide-react';
+import Image from 'next/image';
+
+
+interface Props {
+  title: string;
+  name: string;
+  address: string;
+  image: string;
+}
+
+ function OfficeSection({ title, name, address, image }: Props) {
+  return (
+    <section className="max-w-7xl mx-auto px-12 py-28 border-t border-black/10">
+      <h2 className="text-[56px] font-serif text-center mb-16">
+        {title}
+      </h2>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+
+        {/* Left */}
+        <div className="space-y-10 text-lg text-black/80 leading-relaxed">
+          <div className="space-y-5">
+            <p><strong>Main Phone:</strong> (786) 536-1701</p>
+            <p><strong>WhatsApp:</strong> (786) 893-4315</p>
+            <p><strong>Fax:</strong> (305) 847-2447</p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-serif mb-3">
+              {name}
+            </h3>
+            <p>{address}</p>
+          </div>
+
+          <div>
+            <h4 className="text-2xl font-serif mb-3">Hours</h4>
+            <p>Open today 09:00 am – 05:00 pm</p>
+          </div>
+
+          <button className="bg-[#f1e3cc] px-10 py-4 text-lg font-serif hover:bg-[#e6d5bb] transition">
+            Contact Us!
+          </button>
+        </div>
+
+        {/* Right */}
+        <div className="relative w-full h-[520px]">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
 
 export default function LocationsPage() {
   return (
@@ -104,6 +164,28 @@ export default function LocationsPage() {
           </a>
         </div>
       </section>
+       <main>
+      <OfficeSection
+        title="Hialeah Office Location"
+        name="Integrated Healthcare Group – Hialeah"
+        address="900 West 49th Street, ste 512 Hialeah, Florida 33012, United States"
+        image="/home2.webp"
+      />
+
+      <OfficeSection
+        title="Coral Gables Office Location"
+        name="Integrated Healthcare Group – Coral Gables"
+        address="1890 SW 57th Ave Suite 106 Miami, FL, 33155"
+        image="/home.webp"
+      />
+
+      <OfficeSection
+        title="Miami Office Location"
+        name="Integrated Healthcare Group – Miami"
+        address="351 NW 42 Ave. Suite 406. Miami, FL 33126"
+        image="/home1.webp"
+      />
+    </main>
     </>
   );
 }
