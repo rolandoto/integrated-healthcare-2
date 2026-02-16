@@ -1,119 +1,155 @@
 export default function TermsConditionsPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-20">
+      <section className="bg-gradient-to-br from-primary-700 to-primary-500 py-20 text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Terms & Conditions
-            </h1>
-            <p className="text-xl">
-              Please read these terms carefully before using our services
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="font-display mb-4 text-5xl font-bold md:text-6xl">Terms & Conditions</h1>
+            <p className="text-lg md:text-xl">
+              Please review these terms carefully before using our website, services, or SMS communications.
             </p>
+            <p className="mt-4 text-sm text-primary-100">Effective Date: January 1, 2024</p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="bg-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto prose prose-lg">
-            <h2>Acceptance of Terms</h2>
+          <div className="prose prose-lg mx-auto max-w-4xl prose-headings:text-primary-700">
             <p>
-              By accessing or using the services provided by Integrated Health Care Group Psychiatry, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.
+              Welcome to Integrated Healthcare Services (“we,” “our,” or “us”). By accessing or using our website,
+              services, or subscribing to SMS communications, you agree to comply with and be bound by these Terms and
+              Conditions. If you do not agree, please do not use our website or services.
             </p>
 
-            <h2>Services Provided</h2>
             <p>
-              Integrated Health Care Group provides psychiatric and mental health services including:
+              These Terms and Conditions govern your use of our website, healthcare offerings, and related
+              communication services, including email and SMS messaging. These terms are intended to ensure a clear
+              understanding between Integrated Healthcare Services and you, the user.
             </p>
+
+            <h2>Use of Our Website and Services</h2>
+
+            <h3>Eligibility</h3>
+            <p>
+              You must be at least 18 years old to use our services, or you must have the involvement of a parent or
+              legal guardian.
+            </p>
+
+            <h3>Accuracy of Information</h3>
+            <p>
+              While we strive to provide accurate and up-to-date information, Integrated Healthcare Services does not
+              warrant the accuracy, completeness, or usefulness of information presented on this site. Content is for
+              informational purposes only and is not a substitute for professional medical advice, diagnosis, or
+              treatment.
+            </p>
+
+            <h3>Prohibited Conduct</h3>
+            <p>You agree not to:</p>
             <ul>
-              <li>Psychiatric evaluations and consultations</li>
-              <li>Individual and group therapy</li>
-              <li>Medication management</li>
-              <li>Telemedicine/telepsychiatry services</li>
-              <li>Crisis intervention and support</li>
+              <li>Use our site or services for any unlawful purpose.</li>
+              <li>Harass, abuse, or threaten others.</li>
+              <li>Post or transmit false or misleading information.</li>
+              <li>Attempt to gain unauthorized access to our systems.</li>
+              <li>Use our site to promote spam, unauthorized marketing, or malicious software.</li>
             </ul>
 
-            <h2>Patient Responsibilities</h2>
+            <h3>Intellectual Property</h3>
             <p>
-              As a patient, you agree to:
+              All content on this website, including but not limited to text, graphics, logos, images, videos, and
+              software, is the property of Integrated Healthcare Services and is protected under U.S. and
+              international copyright laws. Unauthorized use, reproduction, or distribution is strictly prohibited.
+            </p>
+
+            <h2>Services and Appointments</h2>
+            <p>
+              We reserve the right to cancel, reschedule, or deny services to any individual for reasons including but
+              not limited to:
             </p>
             <ul>
-              <li>Provide accurate and complete information about your medical history</li>
-              <li>Attend scheduled appointments or provide at least 24 hours notice for cancellations</li>
-              <li>Follow treatment recommendations and medication instructions</li>
-              <li>Communicate openly with your healthcare provider</li>
-              <li>Pay for services in accordance with your insurance coverage or self-pay agreement</li>
+              <li>Violation of these terms.</li>
+              <li>Inappropriate behavior.</li>
+              <li>Missed appointments without prior notice.</li>
+              <li>Non-compliance with treatment recommendations.</li>
             </ul>
-
-            <h2>Appointment Cancellation Policy</h2>
             <p>
-              We require at least 24 hours notice for appointment cancellations or rescheduling. Late cancellations or no-shows may result in a cancellation fee as determined by your insurance policy or self-pay agreement.
+              All appointments are subject to availability. A missed appointment policy and cancellation policy may
+              apply.
             </p>
 
-            <h2>Payment and Insurance</h2>
+            <h2>Limitation of Liability</h2>
             <p>
-              Payment is expected at the time of service unless other arrangements have been made. We accept most major insurance plans. Patients are responsible for understanding their insurance coverage and any applicable co-pays, deductibles, or out-of-pocket expenses.
+              To the fullest extent permitted by law, Integrated Healthcare Services shall not be liable for any
+              indirect, incidental, or consequential damages arising out of the use or inability to use our services,
+              website, or SMS communications. This includes damages for lost profits, data loss, or business
+              interruption.
             </p>
 
-            <h2>Telemedicine Services</h2>
+            <h2>Insurance and Payment</h2>
             <p>
-              Telemedicine services are provided through a secure, HIPAA-compliant platform. By using our telemedicine services, you agree to:
+              We accept most insurance plans and offer a sliding scale fee for uninsured patients. We believe everyone
+              deserves access to quality mental health care and are committed to making services accessible.
             </p>
+
+            <h2>SMS Communications Terms and Conditions</h2>
+
+            <h3>A. Overview of SMS Campaigns</h3>
+            <p>Our SMS campaigns may include:</p>
             <ul>
-              <li>Participate in sessions from a private, quiet location</li>
-              <li>Ensure you have a reliable internet connection</li>
-              <li>Understand that technical issues may occasionally occur</li>
-              <li>Acknowledge that telemedicine may not be appropriate for all conditions</li>
+              <li>Appointment confirmations, reminders, and rescheduling notifications.</li>
+              <li>Healthcare-related updates.</li>
+              <li>General practice updates.</li>
+              <li>Customer service messages.</li>
+              <li>Occasional promotions or wellness tips (with express consent).</li>
             </ul>
 
-            <h2>Confidentiality and Privacy</h2>
+            <h3>B. Message Frequency</h3>
             <p>
-              All patient information is kept strictly confidential in accordance with HIPAA regulations. Please refer to our Privacy Policy for detailed information on how we collect, use, and protect your personal health information.
+              Message frequency varies based on your care and activity level. Typically, you may receive 1–5 messages
+              per week.
             </p>
 
-            <h2>Limitations of Liability</h2>
-            <p>
-              While we strive to provide the highest quality care, Integrated Health Care Group cannot guarantee specific treatment outcomes. Our liability is limited to the extent permitted by law.
-            </p>
-
-            <h2>Emergency Services</h2>
-            <p>
-              Our services are not designed for emergency situations. If you are experiencing a mental health crisis or medical emergency, please:
-            </p>
+            <h3>C. Opt-In and Consent</h3>
+            <p>You may opt in to SMS messaging by:</p>
             <ul>
-              <li>Call 911</li>
-              <li>Go to your nearest emergency room</li>
-              <li>Call the National Suicide Prevention Lifeline: 988</li>
+              <li>Texting “START” to 786-536-1701.</li>
+              <li>Checking a consent box during online intake or scheduling.</li>
+              <li>Providing verbal consent during in-person or phone interactions.</li>
             </ul>
-
-            <h2>SMS Messaging Terms</h2>
             <p>
-              By opting in to receive SMS messages, you consent to receive appointment reminders and healthcare-related communications. Message and data rates may apply. You may opt-out at any time by replying STOP.
+              By opting in, you consent to receive SMS messages to the number you provided. Message and data rates may
+              apply.
             </p>
 
-            <h2>Modifications to Terms</h2>
+            <h3>D. Opt-Out</h3>
             <p>
-              We reserve the right to modify these Terms and Conditions at any time. Changes will be posted on our website and become effective immediately upon posting. Your continued use of our services constitutes acceptance of any modifications.
+              You may opt out at any time by replying STOP to any message. You may also contact our office to revoke
+              SMS consent. Once you opt out, you will no longer receive messages unless you opt in again.
             </p>
 
-            <h2>Governing Law</h2>
+            <h3>E. HELP</h3>
             <p>
-              These Terms and Conditions are governed by the laws of the State of Florida and applicable federal laws.
+              For support, reply HELP to any message or contact us directly at{' '}
+              <a href="tel:+17865361701">786-536-1701</a>.
+            </p>
+
+            <h3>F. Data & Privacy</h3>
+            <p>
+              Your personal information, including your phone number, will never be sold or shared with third parties
+              for marketing purposes. Data collected through SMS is handled in accordance with our Privacy Policy. By
+              opting in, you acknowledge and accept the use of your data as outlined in our policies.
+            </p>
+
+            <h3>G. Disclaimer</h3>
+            <p>
+              We are not liable for delays, undelivered messages, or SMS failures caused by cellular providers or
+              network issues. SMS delivery is not guaranteed and may be impacted by carrier policies or system outages.
             </p>
 
             <h2>Contact Information</h2>
             <p>
-              If you have questions about these Terms and Conditions, please contact us:
-            </p>
-            <p>
-              <strong>Phone:</strong> (786) 536-1701<br />
-              <strong>Email:</strong> psychiatry@integratedhealthcare.group<br />
-              <strong>Fax:</strong> (305) 847-2447
-            </p>
-
-            <p className="text-sm text-gray-600 mt-8">
-              Last Updated: January 2024
+              If you have questions regarding these Terms and Conditions, please contact us at{' '}
+              <a href="tel:+17865361701">(786) 536-1701</a>.
             </p>
           </div>
         </div>
