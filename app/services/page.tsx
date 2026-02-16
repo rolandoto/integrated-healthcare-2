@@ -12,23 +12,23 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     title: 'Depression & Anxiety',
-    shortDescription: 'Depression, fear, and anxiety are some of the most common—and often most distressing—emotions we can face in life. These feelings can affect our motivation, relationships, work, and even our sense of identity. At Integrated Health Care, we offer personalized treatment plans combining therapy, medication management, and holistic support to',
+    shortDescription: 'Depression, fear, and anxiety are some of the most common—and often most distressing—emotions we can face in life. These feelings can affect our motivation, relationships, work, and even our sense of identity. At Integrated Health Care, we offer personalized treatment plans combining therapy, medication management, and holistic support.',
     fullDescription: 'Depression, fear, and anxiety are some of the most common—and often most distressing—emotions we can face in life. These feelings can affect our motivation, relationships, work, and even our sense of identity. At Integrated Health Care, we offer personalized treatment plans combining therapy, medication management, and holistic support to help you restore the joy, energy, and clarity you deserve. Our goal is not just symptom relief, but lasting transformation.',
   },
   {
     title: 'Trauma & PTSD',
-    shortDescription: 'Surviving a traumatic experience can leave lasting emotional wounds. Feelings of hopelessness, fear, and panic often persist long after the event is over. Whether you're dealing with childhood trauma, combat-related PTSD, or loss-related grief, we provide trauma-informed care that meets you with safety, understanding, and empowerment. Our',
-    fullDescription: 'Surviving a traumatic experience can leave lasting emotional wounds. Feelings of hopelessness, fear, and panic often persist long after the event is over. Whether you're dealing with childhood trauma, combat-related PTSD, or loss-related grief, we provide trauma-informed care that meets you with safety, understanding, and empowerment. Our team uses evidence-based interventions to guide you gently through the healing process—at your own pace.',
+    shortDescription: "Surviving a traumatic experience can leave lasting emotional wounds. Feelings of hopelessness, fear, and panic often persist long after the event is over. Whether you're dealing with childhood trauma, combat-related PTSD, or loss-related grief, we provide trauma-informed care with safety, understanding, and empowerment.",
+    fullDescription: "Surviving a traumatic experience can leave lasting emotional wounds. Feelings of hopelessness, fear, and panic often persist long after the event is over. Whether you're dealing with childhood trauma, combat-related PTSD, or loss-related grief, we provide trauma-informed care that meets you with safety, understanding, and empowerment. Our team uses evidence-based interventions to guide you gently through the healing process—at your own pace.",
   },
   {
     title: 'Bipolar Disorder',
-    shortDescription: 'Living with Bipolar Disorder presents unique challenges—intense mood swings, energy shifts, and disruptions to daily life. At Integrated Health Care, we offer compassionate, structured care to help you stabilize your mood, identify early warning signs, and improve your quality of life. Treatment may include medication management, individu',
+    shortDescription: 'Living with Bipolar Disorder presents unique challenges—intense mood swings, energy shifts, and disruptions to daily life. At Integrated Health Care, we offer compassionate, structured care to help you stabilize your mood, identify early warning signs, and improve your quality of life.',
     fullDescription: 'Living with Bipolar Disorder presents unique challenges—intense mood swings, energy shifts, and disruptions to daily life. At Integrated Health Care, we offer compassionate, structured care to help you stabilize your mood, identify early warning signs, and improve your quality of life. Treatment may include medication management, individual therapy, and family support, all customized to fit your unique diagnosis and lifestyle.',
   },
   {
     title: 'Dementia',
-    shortDescription: 'A dementia diagnosis affects not only the individual, but their entire family. Memory loss, confusion, and behavioral changes can be overwhelming—but you don't have to face them alone.',
-    fullDescription: 'A dementia diagnosis affects not only the individual, but their entire family. Memory loss, confusion, and behavioral changes can be overwhelming—but you don't have to face them alone. We provide patient-focused care for individuals with dementia, as well as education and guidance for caregivers, so you can navigate this journey with dignity, knowledge, and compassionate support.',
+    shortDescription: "A dementia diagnosis affects not only the individual, but their entire family. Memory loss, confusion, and behavioral changes can be overwhelming—but you don't have to face them alone.",
+    fullDescription: "A dementia diagnosis affects not only the individual, but their entire family. Memory loss, confusion, and behavioral changes can be overwhelming—but you don't have to face them alone. We provide patient-focused care for individuals with dementia, as well as education and guidance for caregivers, so you can navigate this journey with dignity, knowledge, and compassionate support.",
   },
   {
     title: 'Schizophrenia',
@@ -37,8 +37,8 @@ const services: ServiceItem[] = [
   },
   {
     title: 'Telemedicine / Tele-Psychiatry',
-    shortDescription: 'Accessing quality mental health care should never be limited by geography or circumstance. Through our secure telemedicine platform, you can schedule virtual sessions with licensed professionals from the comfort and privacy of your own home. Whether it's therapy, medication consultations, or couples counseling, we offer flexible, HIPAA-co',
-    fullDescription: 'Accessing quality mental health care should never be limited by geography or circumstance. Through our secure telemedicine platform, you can schedule virtual sessions with licensed professionals from the comfort and privacy of your own home. Whether it's therapy, medication consultations, or couples counseling, we offer flexible, HIPAA-compliant services designed for modern living—without compromising the quality of care.',
+    shortDescription: "Accessing quality mental health care should never be limited by geography or circumstance. Through our secure telemedicine platform, you can schedule virtual sessions with licensed professionals from the comfort and privacy of your own home.",
+    fullDescription: "Accessing quality mental health care should never be limited by geography or circumstance. Through our secure telemedicine platform, you can schedule virtual sessions with licensed professionals from the comfort and privacy of your own home. Whether it's therapy, medication consultations, or couples counseling, we offer flexible, HIPAA-compliant services designed for modern living—without compromising the quality of care.",
   },
 ];
 
