@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, Mail, Fax, MessageSquare } from 'lucide-react';
+import { Phone, Mail, Printer, MessageSquare } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="flex items-start">
-                    <Fax className="w-6 h-6 text-primary-500 mr-4 mt-1" />
+                    <Printer className="w-6 h-6 text-primary-500 mr-4 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Fax:</p>
                       <p className="text-gray-700">(305) 847-2447</p>
