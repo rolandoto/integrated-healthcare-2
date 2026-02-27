@@ -4,10 +4,6 @@ import Link from 'next/link';
 import { Phone, Heart, Users, Award } from 'lucide-react';
 import Image from 'next/image';
 
-
-
-
-
 function ContactPage() {
   return (
     <div className="min-h-screen bg-[#e2d5c6] flex items-center justify-center px-10 py-20">
@@ -99,7 +95,7 @@ export default function Home() {
     <>
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/90 z-10" />
-        <div className="absolute inset-0 bg-[url('https://img1.wsimg.com/isteam/videos/V8Jxg8Q')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/image/home.jpeg')] bg-cover bg-center" />
         
         <div className="relative z-20 container mx-auto px-4 text-center">
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
