@@ -25,13 +25,19 @@ export default function Home() {
       <section className="relative flex min-h-[520px] items-center justify-center overflow-hidden text-white">
         <div className="absolute inset-0 bg-[url('/image/home.jpeg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/85" />
+        <div className="hero-aurora pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-accent-500/30 blur-3xl" />
+        <div className="hero-aurora pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-primary-500/25 blur-3xl [animation-delay:1.6s]" />
+        <div className="hero-grid pointer-events-none absolute inset-0" />
 
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
-          <h1 className="font-display text-5xl font-bold leading-tight md:text-7xl">Integrated Healthcare Group</h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg md:text-2xl">
+          <p className="hero-pill mx-auto inline-flex items-center rounded-full border border-white/35 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/90">
+            Compassionate Psychiatry, Measurable Progress
+          </p>
+          <h1 className="hero-title mt-5 font-display text-5xl font-bold leading-tight md:text-7xl">Integrated Healthcare Group</h1>
+          <p className="hero-copy mx-auto mt-6 max-w-3xl text-lg md:text-2xl">
             Comprehensive psychiatric care focused on clinical stability, functional recovery, and long-term quality of life.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="hero-actions mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="tel:+17865361701"
               className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 font-semibold text-primary-700 transition hover:bg-slate-100"
@@ -45,6 +51,20 @@ export default function Home() {
             >
               View Services
             </Link>
+          </div>
+          <div className="hero-kpis mx-auto mt-10 grid max-w-4xl gap-3 text-left sm:grid-cols-3">
+            <article className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur">
+              <p className="text-2xl font-bold">24h</p>
+              <p className="text-sm text-white/80">Rapid response for appointment requests</p>
+            </article>
+            <article className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur">
+              <p className="text-2xl font-bold">Bilingual</p>
+              <p className="text-sm text-white/80">Care available in English and Spanish</p>
+            </article>
+            <article className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur">
+              <p className="text-2xl font-bold">Integrated</p>
+              <p className="text-sm text-white/80">Coordination with therapists and primary care</p>
+            </article>
           </div>
         </div>
       </section>
