@@ -1,142 +1,124 @@
-'use client';
+import { CheckCircle2 } from 'lucide-react';
 
-import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-
-interface ServiceItem {
-  title: string;
-  shortDescription: string;
-  fullDescription: string;
-}
-
-const services: ServiceItem[] = [
+const servicesEn = [
   {
-    title: 'Depression & Anxiety',
-    shortDescription: 'Depression, fear, and anxiety are some of the most common—and often most distressing—emotions we can face in life. These feelings can affect our motivation, relationships, work, and even our sense of identity. At Integrated Health Care, we offer personalized treatment plans combining therapy, medication management, and holistic support.',
-    fullDescription: 'Depression, fear, and anxiety are some of the most common—and often most distressing—emotions we can face in life. These feelings can affect our motivation, relationships, work, and even our sense of identity. At Integrated Health Care, we offer personalized treatment plans combining therapy, medication management, and holistic support to help you restore the joy, energy, and clarity you deserve. Our goal is not just symptom relief, but lasting transformation.',
+    title: 'Psychiatric Evaluations',
+    description:
+      'Thorough psychiatric assessments to establish accurate diagnoses and individualized treatment plans, including diagnostic clarification, risk assessment, and functional evaluation aligned with DSM-5-TR standards.',
   },
   {
-    title: 'Trauma & PTSD',
-    shortDescription: "Surviving a traumatic experience can leave lasting emotional wounds. Feelings of hopelessness, fear, and panic often persist long after the event is over. Whether you're dealing with childhood trauma, combat-related PTSD, or loss-related grief, we provide trauma-informed care with safety, understanding, and empowerment.",
-    fullDescription: "Surviving a traumatic experience can leave lasting emotional wounds. Feelings of hopelessness, fear, and panic often persist long after the event is over. Whether you're dealing with childhood trauma, combat-related PTSD, or loss-related grief, we provide trauma-informed care that meets you with safety, understanding, and empowerment. Our team uses evidence-based interventions to guide you gently through the healing process—at your own pace.",
+    title: 'Medication Management',
+    description:
+      'Evidence-based psychopharmacologic treatment with monitoring of response, side effects, and long-term safety. Medication plans are reviewed and adjusted regularly to optimize outcomes and adherence.',
   },
   {
-    title: 'Bipolar Disorder',
-    shortDescription: 'Living with Bipolar Disorder presents unique challenges—intense mood swings, energy shifts, and disruptions to daily life. At Integrated Health Care, we offer compassionate, structured care to help you stabilize your mood, identify early warning signs, and improve your quality of life.',
-    fullDescription: 'Living with Bipolar Disorder presents unique challenges—intense mood swings, energy shifts, and disruptions to daily life. At Integrated Health Care, we offer compassionate, structured care to help you stabilize your mood, identify early warning signs, and improve your quality of life. Treatment may include medication management, individual therapy, and family support, all customized to fit your unique diagnosis and lifestyle.',
+    title: 'Treatment of Complex Psychiatric Conditions',
+    description:
+      'Specialized care for moderate to severe psychiatric disorders, including mood disorders, psychotic disorders, anxiety disorders, trauma-related conditions, personality disorders, and co-occurring substance use disorders.',
   },
   {
-    title: 'Dementia',
-    shortDescription: "A dementia diagnosis affects not only the individual, but their entire family. Memory loss, confusion, and behavioral changes can be overwhelming—but you don't have to face them alone.",
-    fullDescription: "A dementia diagnosis affects not only the individual, but their entire family. Memory loss, confusion, and behavioral changes can be overwhelming—but you don't have to face them alone. We provide patient-focused care for individuals with dementia, as well as education and guidance for caregivers, so you can navigate this journey with dignity, knowledge, and compassionate support.",
+    title: 'Longitudinal Care and Monitoring',
+    description:
+      'Continuity of care through regular follow-up visits, symptom monitoring, and functional assessments focused on long-term stability and relapse prevention.',
   },
   {
-    title: 'Schizophrenia',
-    shortDescription: 'Schizophrenia requires specialized care and a long-term support system. Our dedicated psychiatric team works closely with patients and their families to manage symptoms, enhance functionality, and maintain stability. We emphasize:',
-    fullDescription: 'Schizophrenia requires specialized care and a long-term support system. Our dedicated psychiatric team works closely with patients and their families to manage symptoms, enhance functionality, and maintain stability. We emphasize: Accurate diagnosis and medication monitoring, Cognitive and behavioral therapy, Education for both patients and caregivers, Crisis planning and relapse prevention. Our approach is comprehensive, respectful, and empowering, focusing on long-term well-being and integration into the community.',
+    title: 'Care Coordination & Targeted Case Management',
+    description:
+      'Collaboration with primary care providers, hospitals, therapists, and community services, including transitions from inpatient to outpatient settings and support from specialized social worker services.',
   },
   {
-    title: 'Telemedicine / Tele-Psychiatry',
-    shortDescription: "Accessing quality mental health care should never be limited by geography or circumstance. Through our secure telemedicine platform, you can schedule virtual sessions with licensed professionals from the comfort and privacy of your own home.",
-    fullDescription: "Accessing quality mental health care should never be limited by geography or circumstance. Through our secure telemedicine platform, you can schedule virtual sessions with licensed professionals from the comfort and privacy of your own home. Whether it's therapy, medication consultations, or couples counseling, we offer flexible, HIPAA-compliant services designed for modern living—without compromising the quality of care.",
+    title: 'Psychosocial Support and Psychoeducation',
+    description:
+      'Supportive interventions for patients and families that improve understanding, engagement, adherence, and recovery-oriented treatment goals.',
   },
 ];
 
-function ServiceCard({ service }: { service: ServiceItem }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+const servicesEs = [
+  {
+    title: 'Evaluaciones Psiquiátricas',
+    description:
+      'Evaluaciones completas para establecer diagnósticos precisos y diseñar planes de tratamiento individualizados, incluyendo valoración diagnóstica, evaluación de riesgo y análisis funcional conforme a DSM-5-TR.',
+  },
+  {
+    title: 'Manejo Psicofarmacológico',
+    description:
+      'Tratamiento psicofarmacológico basado en evidencia con monitoreo de respuesta clínica, efectos secundarios y seguridad a largo plazo, con ajustes regulares para optimizar resultados.',
+  },
+  {
+    title: 'Tratamiento de Condiciones Psiquiátricas Complejas',
+    description:
+      'Manejo especializado de trastornos psiquiátricos de moderada a alta complejidad, incluyendo trastornos del estado de ánimo, trastornos psicóticos, ansiedad, trauma, personalidad y uso concomitante de sustancias.',
+  },
+  {
+    title: 'Seguimiento Longitudinal',
+    description:
+      'Continuidad del cuidado mediante visitas periódicas, monitoreo de síntomas y evaluación funcional para mantener estabilidad clínica y prevenir recaídas.',
+  },
+  {
+    title: 'Coordinación del Cuidado y Case Management',
+    description:
+      'Trabajo coordinado con médicos primarios, hospitales, terapeutas y recursos comunitarios, incluyendo transiciones seguras entre niveles de atención y apoyo de trabajadores sociales especializados.',
+  },
+  {
+    title: 'Apoyo Psicosocial y Psicoeducación',
+    description:
+      'Intervenciones de apoyo para pacientes y familias orientadas a fortalecer la comprensión de la condición, la adherencia terapéutica y la recuperación funcional.',
+  },
+];
 
+function ServiceColumn({
+  title,
+  subtitle,
+  items,
+}: {
+  title: string;
+  subtitle: string;
+  items: { title: string; description: string }[];
+}) {
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-      <div className="p-8">
-        <h3 className="font-display text-2xl font-bold text-primary-700 mb-4">
-          {service.title}
-        </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          {isExpanded ? service.fullDescription : service.shortDescription}
-        </p>
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center text-primary-500 hover:text-primary-600 font-semibold transition-colors"
-        >
-          {isExpanded ? (
-            <>
-              Show Less <ChevronUp className="ml-1 w-5 h-5" />
-            </>
-          ) : (
-            <>
-              Show More <ChevronDown className="ml-1 w-5 h-5" />
-            </>
-          )}
-        </button>
+    <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+      <h2 className="font-display text-3xl font-bold text-primary-700">{title}</h2>
+      <p className="mt-2 text-slate-600">{subtitle}</p>
+      <div className="mt-8 space-y-5">
+        {items.map((item) => (
+          <div key={item.title} className="rounded-xl border border-slate-100 bg-slate-50 p-5">
+            <h3 className="inline-flex items-start gap-2 text-lg font-semibold text-slate-900">
+              <CheckCircle2 className="mt-0.5 h-5 w-5 text-primary-600" />
+              {item.title}
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.description}</p>
+          </div>
+        ))}
       </div>
-    </div>
+    </article>
   );
 }
 
 export default function ServicesPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Our Services
-            </h1>
-            <p className="text-2xl font-light italic mb-4">
-              Specialized Care. Compassionate Approach. Personalized Healing.
-            </p>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-              At Integrated Health Care Group Psychiatry, we offer a full spectrum of mental health services designed to support individuals and families through every stage of life.
-            </p>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto mt-4">
-              Whether you are navigating anxiety, depression, trauma, or chronic mental health conditions, our team of experienced psychiatrists, nurse practitioners, and therapists are here to walk with you—every step of the way.
-            </p>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto mt-4">
-              Our mission is to deliver clinically effective, culturally sensitive, and deeply compassionate care. We believe mental health is health, and we are committed to helping our patients achieve lasting wellness, balance, and peace of mind.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="font-display text-4xl font-bold text-center mb-12 text-primary-700">
-            Our Areas of Expertise
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
-              <ServiceCard key={index} service={service} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary-700 text-white">
+      <section className="bg-gradient-to-br from-primary-700 to-primary-500 py-20 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-4xl font-bold mb-6">
-            Ready to Start Your Healing Journey?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us today to schedule your consultation and take the first step toward better mental health.
+          <h1 className="font-display text-5xl font-bold md:text-6xl">Our Services / Nuestros Servicios</h1>
+          <p className="mx-auto mt-5 max-w-4xl text-lg leading-relaxed">
+            Integrated Healthcare Psychiatric Group delivers comprehensive, evidence-based psychiatric services with clinical rigor, compassion,
+            and continuity of care focused on symptom control and long-term functional recovery.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+17865361701"
-              className="bg-white text-primary-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105"
-            >
-              Call (786) 536-1701
-            </a>
-            <a
-              href="/contact"
-              className="bg-accent-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-accent-600 transition-all hover:scale-105"
-            >
-              Contact Us Online
-            </a>
-          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-20">
+        <div className="container mx-auto grid gap-8 px-4 lg:grid-cols-2">
+          <ServiceColumn
+            title="English Version"
+            subtitle="Comprehensive psychiatric services for children, adults, and families."
+            items={servicesEn}
+          />
+          <ServiceColumn
+            title="Versión en Español"
+            subtitle="Servicios psiquiátricos integrales con enfoque clínico y humano."
+            items={servicesEs}
+          />
         </div>
       </section>
     </>

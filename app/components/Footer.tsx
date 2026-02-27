@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Instagram, Music2 } from 'lucide-react';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -103,6 +103,24 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link href="/privacy-policy" className="text-slate-300 transition-colors hover:text-white">Privacy Policy</Link></li>
             <li><Link href="/terms-conditions" className="text-slate-300 transition-colors hover:text-white">Terms & Conditions</Link></li>
+            <li>
+              <a href="https://wa.me/17868934315" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-white">
+                <MessageCircle className="h-4 w-4 text-primary-300" />
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@integratedhcg" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-white">
+                <Music2 className="h-4 w-4 text-primary-300" />
+                TikTok @integratedhcg
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/integrated_psych/?hl=en" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-300 transition-colors hover:text-white">
+                <Instagram className="h-4 w-4 text-primary-300" />
+                Instagram @integrated_psych
+              </a>
+            </li>
           </ul>
         </div>
       </div>
