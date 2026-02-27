@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone } from 'lucide-react';
+import { MapPin, Clock, Phone, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 
 
@@ -38,9 +38,24 @@ interface Props {
             <p>Open today 09:00 am – 05:00 pm</p>
           </div>
 
-          <button className="bg-[#f1e3cc] px-10 py-4 text-lg font-serif hover:bg-[#e6d5bb] transition">
-            Contact Us!
-          </button>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="tel:+17865361701"
+              className="inline-flex items-center gap-2 rounded-full bg-[#f1e3cc] px-7 py-3 text-base font-semibold text-black transition hover:bg-[#e6d5bb]"
+            >
+              <Phone className="h-5 w-5" />
+              Call (786) 536-1701
+            </a>
+            <a
+              href="https://wa.me/17868934315"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-green-600 px-7 py-3 text-base font-semibold text-white transition hover:bg-green-700"
+            >
+              <MessageCircle className="h-5 w-5" />
+              WhatsApp +1 (786) 893-4315
+            </a>
+          </div>
         </div>
 
         {/* Right */}
@@ -142,6 +157,15 @@ export default function LocationsPage() {
                     <p className="text-xl">(305) 847-2447</p>
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-8 border-t border-white/30 pt-6">
+                <p className="font-semibold text-lg mb-3">Our Main Locations:</p>
+                <ul className="space-y-2 text-base md:text-lg">
+                  <li>Hialeah: 900 West 49th Street, Ste 512, Hialeah, FL 33012</li>
+                  <li>Coral Gables: 1890 SW 57th Ave, Suite 106, Miami, FL 33155</li>
+                  <li>Miami: 351 NW 42 Ave, Suite 406, Miami, FL 33126</li>
+                </ul>
               </div>
             </div>
           </div>
