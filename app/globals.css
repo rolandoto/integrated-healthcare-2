@@ -59,6 +59,37 @@ h6 {
   }
 }
 
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes auroraMove {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(20px, -22px, 0) scale(1.08);
+  }
+}
+
+@keyframes gridPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -78,3 +109,42 @@ h6 {
 .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
 .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
 .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+.hero-pill,
+.hero-title,
+.hero-copy,
+.hero-actions,
+.hero-kpis {
+  opacity: 0;
+  animation: heroReveal 0.8s ease-out forwards;
+}
+
+.hero-title { animation-delay: 0.2s; }
+.hero-copy { animation-delay: 0.35s; }
+.hero-actions { animation-delay: 0.5s; }
+.hero-kpis { animation-delay: 0.65s; }
+
+.hero-aurora {
+  animation: auroraMove 8s ease-in-out infinite;
+}
+
+.hero-grid {
+  background-image: linear-gradient(to right, rgb(255 255 255 / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at center, black 25%, transparent 80%);
+  animation: gridPulse 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-pill,
+  .hero-title,
+  .hero-copy,
+  .hero-actions,
+  .hero-kpis,
+  .hero-aurora,
+  .hero-grid {
+    animation: none !important;
+    opacity: 1;
+  }
+}
