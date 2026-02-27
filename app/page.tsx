@@ -72,7 +72,7 @@ function ContactPage() {
               <li><strong>Wed</strong> 09:00 am – 05:00 pm</li>
               <li><strong>Thu</strong> 09:00 am – 05:00 pm</li>
               <li><strong>Fri</strong> 09:00 am – 05:00 pm</li>
-              <li><strong>Sat</strong> 09:00 am – 12:00 pm</li>
+              <li><strong>Sat</strong> 09:00 am – 05:00 pm</li>
               <li><strong>Sun</strong> Closed</li>
             </ul>
           </div>
@@ -295,9 +295,9 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <h3 className="text-2xl font-bold mb-4">Hours</h3>
               <div className="grid grid-cols-2 gap-4 text-left max-w-md mx-auto">
-                <div>Mon - Fri:</div>
+                <div>Mon - Sat:</div>
                 <div>09:00 am – 05:00 pm</div>
-                <div>Sat - Sun:</div>
+                <div>Sun:</div>
                 <div>Closed</div>
               </div>
             </div>

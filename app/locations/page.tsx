@@ -121,8 +121,8 @@ export default function LocationsPage() {
                 </h3>
                 <div className="text-gray-700">
                   <p className="font-semibold mb-2">Office Hours:</p>
-                  <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                  <p>Saturday - Sunday: Closed</p>
+                  <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
+                  <p>Sunday: Closed</p>
                 </div>
               </div>
             </div>

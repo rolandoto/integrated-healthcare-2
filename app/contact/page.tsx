@@ -101,9 +101,9 @@ export default function ContactPage() {
                   Office Hours
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="font-semibold">Monday - Friday:</div>
+                  <div className="font-semibold">Monday - Saturday:</div>
                   <div>09:00 am – 05:00 pm</div>
-                  <div className="font-semibold">Saturday - Sunday:</div>
+                  <div className="font-semibold">Sunday:</div>
                   <div>Closed</div>
                 </div>
               </div>
