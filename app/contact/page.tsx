@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, Mail, Printer, MessageSquare } from 'lucide-react';
+import { Phone, Mail, Printer, MessageSquare, Instagram, Music2 } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -89,6 +89,26 @@ export default function ContactPage() {
                       <p className="font-semibold text-gray-900">Email:</p>
                       <a href="mailto:psychiatry@integratedhealthcare.group" className="text-primary-600 hover:text-primary-700 break-all">
                         psychiatry@integratedhealthcare.group
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <Music2 className="w-6 h-6 text-primary-500 mr-4 mt-1" />
+                    <div>
+                      <p className="font-semibold text-gray-900">TikTok:</p>
+                      <a href="https://www.tiktok.com/@integratedhcg" target="_blank" rel="noreferrer" className="text-primary-600 hover:text-primary-700">
+                        @integratedhcg
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <Instagram className="w-6 h-6 text-primary-500 mr-4 mt-1" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Instagram:</p>
+                      <a href="https://www.instagram.com/integrated_psych/?hl=en" target="_blank" rel="noreferrer" className="text-primary-600 hover:text-primary-700">
+                        @integrated_psych
                       </a>
                     </div>
                   </div>
