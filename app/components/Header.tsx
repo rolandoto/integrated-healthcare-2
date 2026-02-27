@@ -31,7 +31,7 @@ export default function Header() {
             </a>
             <p className="inline-flex items-center gap-2 text-primary-100">
               <Clock3 className="h-4 w-4" />
-              Mon - Fri: 9:00 AM - 6:00 PM
+              Mon - Sat: 9:00 AM - 5:00 PM
             </p>
           </div>
           <p className="inline-flex items-center gap-2 text-primary-100">
