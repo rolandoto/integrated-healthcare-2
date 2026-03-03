@@ -21,9 +21,9 @@ export default function OurTeamPage() {
       <section className="bg-slate-50 py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-center font-display text-4xl font-bold text-primary-700">Nuestro Equipo</h2>
+            <h2 className="text-center font-display text-4xl font-bold text-primary-700">Our Team</h2>
             <p className="mx-auto mt-4 max-w-3xl text-center text-slate-600">
-              Equipo clínico actualizado. Se muestran imágenes temporales mientras se agregan las fotos oficiales de cada proveedor.
+              Updated clinical team. Temporary images are shown while official provider photos are being added.
             </p>
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {teamMembers.map((member) => (
