@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X, Phone, ChevronDown, Clock3, MapPin } from 'lucide-react';
 
 const navigationLinks = [
@@ -16,11 +16,38 @@ const navigationLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
+type SiteLanguage = 'es' | 'en';
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFaqsOpen, setIsFaqsOpen] = useState(false);
-  const [language, setLanguage] = useState<'es' | 'en'>('es');
 
+  const [language, setLanguage] = useState<SiteLanguage>('es');
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('site-language');
+    if (storedLanguage === 'es' || storedLanguage === 'en') {
+      setLanguage(storedLanguage);
+    }
+  }, []);
+
+  const applyLanguage = (nextLanguage: SiteLanguage) => {
+    setLanguage(nextLanguage);
+    window.localStorage.setItem('site-language', nextLanguage);
+
+    document.cookie = `googtrans=/en/${nextLanguage}; path=/`;
+    document.cookie = `googtrans=/en/${nextLanguage}; domain=${window.location.hostname}; path=/`;
+
+    if (nextLanguage === 'en') {
+      document.documentElement.lang = 'en';
+    } else {
+      document.documentElement.lang = 'es';
+    }
+
+    window.location.reload();
+  };
+
+ 
   const toggleLanguage = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'es' ? 'en' : 'es'));
   };
