@@ -21,6 +21,7 @@ type SiteLanguage = 'es' | 'en';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFaqsOpen, setIsFaqsOpen] = useState(false);
+
   const [language, setLanguage] = useState<SiteLanguage>('es');
 
   useEffect(() => {
@@ -46,9 +47,9 @@ export default function Header() {
     window.location.reload();
   };
 
+ 
   const toggleLanguage = () => {
-    const nextLanguage: SiteLanguage = language === 'es' ? 'en' : 'es';
-    applyLanguage(nextLanguage);
+    setLanguage((prevLanguage) => (prevLanguage === 'es' ? 'en' : 'es'));
   };
 
   return (
