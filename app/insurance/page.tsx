@@ -1,4 +1,5 @@
 import { CheckCircle, FileText, Phone } from 'lucide-react';
+import PageHero from '../components/PageHero';
 
 export default function InsurancePage() {
   const insuranceProviders = [
@@ -16,18 +17,10 @@ export default function InsurancePage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Insurance & Payment Options
-            </h1>
-            <p className="text-xl">
-              We accept most major insurance plans and offer flexible payment options
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Insurance & Payment Options"
+        description="We accept most major insurance plans and offer flexible payment options"
+      />
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
