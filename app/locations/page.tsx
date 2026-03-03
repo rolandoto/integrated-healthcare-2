@@ -1,5 +1,6 @@
 import { MapPin, Clock, Phone, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
+import PageHero from '../components/PageHero';
 
 
 interface Props {
@@ -78,18 +79,10 @@ interface Props {
 export default function LocationsPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Our Locations
-            </h1>
-            <p className="text-xl">
-              Conveniently located throughout Miami-Dade County
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Our Locations"
+        description="Conveniently located throughout Miami-Dade County"
+      />
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">

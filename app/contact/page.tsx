@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Phone, Mail, Printer, MessageSquare, Instagram, Music2 } from 'lucide-react';
+import PageHero from '../components/PageHero';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -32,17 +33,11 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="font-display text-5xl md:text-6xl font-bold mb-4">
-            CONTACT US!
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Please complete the form below with details about your consultation request, mental health concerns, insurance information, or any questions you may have. Our team is here to support you every step of the way.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="CONTACT US!"
+        description="Please complete the form below with details about your consultation request, mental health concerns, insurance information, or any questions you may have. Our team is here to support you every step of the way."
+        compact
+      />
 
       {/* Contact Info and Form */}
       <section className="py-16 bg-gray-50">
