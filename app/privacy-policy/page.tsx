@@ -1,22 +1,13 @@
+import PageHero from '../components/PageHero';
+
 export default function PrivacyPolicyPage() {
   return (
     <>
-      {/* HERO */}
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Privacy Policy
-            </h1>
-            <p className="text-xl">
-              Your privacy and confidentiality are our top priorities
-            </p>
-            <p className="mt-4 text-sm opacity-80">
-              Effective Date: January 1, 2024 · Last Updated: May 3, 2025
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Privacy Policy"
+        description="Your privacy and confidentiality are our top priorities"
+        footerText="Effective Date: January 1, 2024 · Last Updated: May 3, 2025"
+      />
 
       {/* CONTENT */}
       <section className="py-20 bg-white">

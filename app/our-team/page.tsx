@@ -1,18 +1,43 @@
+import Image from 'next/image';
 import { Users, Award, Heart, Target } from 'lucide-react';
+import PageHero from '../components/PageHero';
+
+const teamMembers = [
+  { name: 'Ivan Acevedo', credentials: 'APRN' },
+  { name: 'Yaisel Perea Perez', credentials: 'PMHNP' },
+  { name: 'Lisyen Pérez', credentials: 'PMHNP' },
+  { name: 'Dasniellis Zoque', credentials: 'APRN' },
+  { name: 'Mayte Ruiz Santiago', credentials: 'MD' },
+];
 
 export default function OurTeamPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-20">
+      <PageHero
+        title="Our Team"
+        description="Meet our dedicated team of psychiatrists and providers committed to your mental wellness."
+      />
+
+      <section className="bg-slate-50 py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Our Team
-            </h1>
-            <p className="text-xl leading-relaxed">
-              Meet our dedicated team of board-certified psychiatrists, psychiatric nurse practitioners, and licensed therapists who are committed to your mental wellness.
+          <div className="mx-auto max-w-6xl">
+            <h2 className="text-center font-display text-4xl font-bold text-primary-700">Nuestro Equipo</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-slate-600">
+              Equipo clínico actualizado. Se muestran imágenes temporales mientras se agregan las fotos oficiales de cada proveedor.
             </p>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {teamMembers.map((member) => (
+                <article key={member.name} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div className="relative h-64 w-full">
+                    <Image src="/image/team-placeholder.svg" alt={`Temporary profile photo for ${member.name}`} fill className="object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-slate-900">{member.name}</h3>
+                    <p className="mt-1 text-sm font-semibold uppercase tracking-[0.14em] text-primary-600">{member.credentials}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>

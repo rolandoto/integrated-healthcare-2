@@ -1,4 +1,5 @@
 import { CheckCircle2 } from 'lucide-react';
+import PageHero from '../components/PageHero';
 
 const servicesEn = [
   {
@@ -97,15 +98,10 @@ function ServiceColumn({
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 py-20 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="font-display text-5xl font-bold md:text-6xl">Our Services / Nuestros Servicios</h1>
-          <p className="mx-auto mt-5 max-w-4xl text-lg leading-relaxed">
-            Integrated Healthcare Psychiatric Group delivers comprehensive, evidence-based psychiatric services with clinical rigor, compassion,
-            and continuity of care focused on symptom control and long-term functional recovery.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Our Services / Nuestros Servicios"
+        description="Integrated Healthcare Psychiatric Group delivers comprehensive, evidence-based psychiatric services with clinical rigor, compassion, and continuity of care focused on symptom control and long-term functional recovery."
+      />
 
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto grid gap-8 px-4 lg:grid-cols-2">

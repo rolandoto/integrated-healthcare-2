@@ -1,17 +1,13 @@
+import PageHero from '../components/PageHero';
+
 export default function TermsConditionsPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 py-20 text-white">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="font-display mb-4 text-5xl font-bold md:text-6xl">Terms & Conditions</h1>
-            <p className="text-lg md:text-xl">
-              Please review these terms carefully before using our website, services, or SMS communications.
-            </p>
-            <p className="mt-4 text-sm text-primary-100">Effective Date: January 1, 2024</p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Terms & Conditions"
+        description="Please review these terms carefully before using our website, services, or SMS communications."
+        footerText="Effective Date: January 1, 2024"
+      />
 
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">

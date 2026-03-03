@@ -1,21 +1,13 @@
 import { Video, Shield, Clock, Globe } from 'lucide-react';
+import PageHero from '../components/PageHero';
 
 export default function TelemedicinePage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              TeleMedicine Services
-            </h1>
-            <p className="text-xl leading-relaxed">
-              Quality mental health care from the comfort and privacy of your own home
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="TeleMedicine Services"
+        description="Quality mental health care from the comfort and privacy of your own home"
+      />
 
       {/* Benefits Section */}
       <section className="py-20 bg-white">

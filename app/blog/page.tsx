@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Calendar, User } from 'lucide-react';
+import PageHero from '../components/PageHero';
 
 export default function BlogPage() {
   const blogPosts = [
@@ -21,18 +22,10 @@ export default function BlogPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-primary-700 to-primary-500 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Blog & Resources
-            </h1>
-            <p className="text-xl">
-              Latest insights, tips, and news about mental health and wellness
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Blog & Resources"
+        description="Latest insights, tips, and news about mental health and wellness"
+      />
 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
