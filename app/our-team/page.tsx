@@ -18,6 +18,12 @@ const teamMembers = [
     image: '/image/WhatsApp Image 2026-02-24 at 8.00.23 PM.jpeg',
     alt: 'Dr. Mayte Ruiz Santiago seated in her office.',
   },
+  {
+    name: 'Richard Tome',
+    credentials: 'PMH-NP',
+    image: '/image/team-placeholder.svg',
+    alt: 'Richard Tome, PMH-NP, psychiatric mental health nurse practitioner.',
+  },
 ];
 
 export default function OurTeamPage() {
@@ -124,6 +130,40 @@ export default function OurTeamPage() {
                 <strong>Family Nurse Practitioner (FNP):</strong> She holds certification as a Family Nurse
                 Practitioner, demonstrating her expertise in providing holistic care across the lifespan.
               </p>
+            </article>
+
+            <article className="mt-12 rounded-3xl bg-slate-50 p-6 text-center md:p-10">
+              <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
+                <Image
+                  src="/image/team-placeholder.svg"
+                  alt="Richard Tome, PMH-NP"
+                  width={1152}
+                  height={1152}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+
+              <h3 className="font-display text-4xl font-bold text-stone-500">Richard Tome, PMH-NP</h3>
+
+              <p className="mx-auto mt-8 max-w-4xl text-3xl leading-relaxed text-slate-600">
+                <strong>Richard Tome, PMH-NP</strong>, is a board-certified <strong>Psychiatric Mental Health Nurse Practitioner</strong>{' '}
+                serving patients at <strong>Integrated Health Care Group</strong> in <strong>Miami, Florida</strong>. With specialized
+                training in diagnosing and treating psychiatric disorders, Richard provides evidence-based, compassionate care to
+                adolescents and adults experiencing a wide range of mental health conditions.
+              </p>
+
+              <h4 className="mt-8 text-3xl font-semibold text-slate-700">Education and Certification:</h4>
+
+              <ul className="mx-auto mt-6 max-w-4xl list-disc space-y-4 pl-8 text-left text-3xl leading-relaxed text-slate-600">
+                <li>
+                  <strong>Psychiatric Mental Health Nurse Practitioner (PMH-NP):</strong> Richard holds certification in psychiatric
+                  mental health nursing, equipping him with specialized skills to assess, diagnose, and treat mental health disorders.
+                </li>
+                <li>
+                  <strong>Advanced Practice Registered Nurse (APRN):</strong> He is a licensed APRN in the state of Florida, allowing
+                  him to provide advanced clinical care to his patients.
+                </li>
+              </ul>
             </article>
 
             <article className="mt-12 rounded-3xl bg-slate-50 p-6 md:p-10 text-center">
