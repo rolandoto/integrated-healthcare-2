@@ -7,7 +7,12 @@ const teamMembers = [
   { name: 'Yaisel Perea Perez', credentials: 'PMHNP' },
   { name: 'Lisyen Pérez', credentials: 'PMHNP' },
   { name: 'Dasniellis Zoque', credentials: 'APRN' },
-  { name: 'Mayte Ruiz Santiago', credentials: 'MD' },
+  {
+    name: 'Mayte Ruiz Santiago',
+    credentials: 'MD',
+    image: '/image/WhatsApp Image 2026-02-24 at 8.00.23 PM.jpeg',
+    alt: 'Dr. Mayte Ruiz Santiago seated in her office.',
+  },
 ];
 
 export default function OurTeamPage() {
@@ -29,7 +34,12 @@ export default function OurTeamPage() {
               {teamMembers.map((member) => (
                 <article key={member.name} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
                   <div className="relative h-64 w-full">
-                    <Image src="/image/team-placeholder.svg" alt={`Temporary profile photo for ${member.name}`} fill className="object-cover" />
+                    <Image
+                      src={member.image ?? '/image/team-placeholder.svg'}
+                      alt={member.alt ?? `Temporary profile photo for ${member.name}`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-slate-900">{member.name}</h3>
@@ -38,6 +48,45 @@ export default function OurTeamPage() {
                 </article>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-5xl">
+            <article className="rounded-3xl bg-slate-50 p-6 md:p-10 text-center">
+              <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
+                <Image
+                  src="/image/WhatsApp Image 2026-02-24 at 8.00.23 PM.jpeg"
+                  alt="Dr. Mayte Ruiz Santiago in consultation office"
+                  width={1152}
+                  height={768}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+
+              <h3 className="font-display text-4xl font-bold uppercase tracking-wide text-stone-500">MAYTE RUIZ SANTIAGO, MD</h3>
+              <p className="mx-auto mt-8 max-w-4xl text-3xl leading-relaxed text-slate-600">
+                Dr. Mayte Ruiz Santiago is a highly experienced, Board Certified psychiatrist based in Miami, FL, with a deep commitment to
+                clinical research and patient care. She earned her medical degree from the Instituto Superior de Ciencias Médicas de la Habana
+                in 2012 and has since gained extensive expertise in the treatment of mental health disorders, including:
+              </p>
+
+              <ul className="mt-8 space-y-2 text-4xl font-bold leading-tight text-slate-700">
+                <li>Bipolar Disorder</li>
+                <li>Obsessive-Compulsive Disorder (OCD)</li>
+                <li>Schizophrenia</li>
+                <li>ADHD (Predominantly Inattentive Type)</li>
+              </ul>
+
+              <p className="mx-auto mt-8 max-w-5xl text-3xl leading-relaxed text-slate-600">
+                Dr. Ruiz Santiago also has a strong focus on geriatric psychiatry, ensuring comprehensive care for aging populations dealing
+                with complex mental health challenges. As the Principal Investigator at Magnum Medical Research, she leads our clinical trials
+                with precision, integrity, and a patient-first approach, ensuring that every study meets the highest ethical and regulatory
+                standards.
+              </p>
+            </article>
           </div>
         </div>
       </section>
