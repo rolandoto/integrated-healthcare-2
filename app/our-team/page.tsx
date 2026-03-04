@@ -9,7 +9,7 @@ const teamMembers = [
     image: '/image/WhatsApp Image 2026-02-24 at 8.00.24 PM.jpeg',
     alt: 'Ivan Acevedo, APRN in a white coat.',
   },
-  { name: 'Yaisel Perea Perez', credentials: 'PMHNP' },
+  { name: 'Yaisel Perea', credentials: 'APRN, FNP' },
   { name: 'Lisyen Pérez', credentials: 'PMHNP' },
   { name: 'Dasniellis Zoque', credentials: 'APRN' },
   {
@@ -94,6 +94,39 @@ export default function OurTeamPage() {
             </article>
 
             <article className="rounded-3xl bg-slate-50 p-6 md:p-10 text-center">
+              <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
+                <Image
+                  src="/image/team-placeholder.svg"
+                  alt="Yaisel Perea, APRN"
+                  width={1152}
+                  height={1152}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+
+              <h3 className="font-display text-4xl font-bold text-stone-500">Yaisel Perea, APRN</h3>
+
+              <p className="mx-auto mt-8 max-w-4xl text-3xl leading-relaxed text-slate-600">
+                <strong>Yaisel Perea, APRN, FNP</strong>, is a dedicated <strong>Family Nurse Practitioner</strong>
+                specializing in <strong>psychiatry</strong> at <strong>Integrated Health Care Group</strong> in
+                <strong> Miami, Florida</strong>. With over three years of clinical experience, Yaisel is committed to
+                delivering compassionate and comprehensive mental health care to her patients.
+              </p>
+
+              <h4 className="mt-8 text-3xl font-semibold text-slate-700">Education and Certification:</h4>
+
+              <p className="mx-auto mt-6 max-w-4xl text-3xl leading-relaxed text-slate-600">
+                <strong>Advanced Practice Registered Nurse (APRN):</strong> Yaisel is a licensed APRN in the state of
+                Florida, with a specialization in family practice and psychiatry.
+              </p>
+
+              <p className="mx-auto mt-6 max-w-4xl text-3xl leading-relaxed text-slate-600">
+                <strong>Family Nurse Practitioner (FNP):</strong> She holds certification as a Family Nurse
+                Practitioner, demonstrating her expertise in providing holistic care across the lifespan.
+              </p>
+            </article>
+
+            <article className="mt-12 rounded-3xl bg-slate-50 p-6 md:p-10 text-center">
               <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
                 <Image
                   src="/image/WhatsApp Image 2026-02-24 at 8.00.23 PM.jpeg"
