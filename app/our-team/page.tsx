@@ -3,7 +3,12 @@ import { Users, Award, Heart, Target } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 const teamMembers = [
-  { name: 'Ivan Acevedo', credentials: 'APRN' },
+  {
+    name: 'Ivan Acevedo',
+    credentials: 'APRN, FNP-C',
+    image: '/image/WhatsApp Image 2026-02-24 at 8.00.24 PM.jpeg',
+    alt: 'Ivan Acevedo, APRN in a white coat.',
+  },
   { name: 'Yaisel Perea Perez', credentials: 'PMHNP' },
   { name: 'Lisyen Pérez', credentials: 'PMHNP' },
   { name: 'Dasniellis Zoque', credentials: 'APRN' },
@@ -55,6 +60,39 @@ export default function OurTeamPage() {
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl">
+            <article className="mb-12 rounded-3xl bg-slate-50 p-6 text-center md:p-10">
+              <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
+                <Image
+                  src="/image/WhatsApp Image 2026-02-24 at 8.00.24 PM.jpeg"
+                  alt="Ivan Acevedo, APRN"
+                  width={1152}
+                  height={1536}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+
+              <h3 className="font-display text-4xl font-bold text-stone-500">Ivan Acevedo, APRN</h3>
+
+              <p className="mx-auto mt-8 max-w-4xl text-3xl leading-relaxed text-slate-600">
+                <strong>Ivan Acevedo, APRN, FNP-C</strong>, is a <strong>Family Nurse Practitioner</strong> specializing in
+                <strong> psychiatry care</strong> at <strong>Integrated Healthcare Group</strong> in <strong>Miami, Florida</strong>.
+                With over two years of experience, Ivan is dedicated to delivering compassionate and comprehensive mental
+                health services to his patients.
+              </p>
+
+              <h4 className="mt-8 text-3xl font-semibold text-slate-700">Education and Certification:</h4>
+
+              <p className="mx-auto mt-6 max-w-4xl text-3xl leading-relaxed text-slate-600">
+                <strong>Master of Science in Nursing (MSN):</strong> Ivan earned his MSN from <strong>Walden University</strong>,
+                equipping him with advanced clinical skills and knowledge in family practice.
+              </p>
+
+              <p className="mx-auto mt-6 max-w-4xl text-3xl leading-relaxed text-slate-600">
+                <strong>Certified Family Nurse Practitioner (FNP-C):</strong> He holds the FNP-C certification, demonstrating
+                his expertise in family nursing practice.
+              </p>
+            </article>
+
             <article className="rounded-3xl bg-slate-50 p-6 md:p-10 text-center">
               <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
                 <Image
