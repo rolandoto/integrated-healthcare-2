@@ -1,30 +1,193 @@
-import Image from 'next/image';
+ import Image from 'next/image';
 import { Users, Award, Heart, Target } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 const teamMembers = [
   {
-    name: 'Ivan Acevedo',
-    credentials: 'APRN, FNP-C',
-    image: '/image/WhatsApp Image 2026-02-24 at 8.00.24 PM.jpeg',
-    alt: 'Ivan Acevedo, APRN in a white coat.',
-  },
-  { name: 'Yaisel Perea', credentials: 'APRN, FNP' },
-  { name: 'Lisyen Pérez', credentials: 'PMHNP' },
-  { name: 'Dasniellis Zoque', credentials: 'APRN' },
-  {
-    name: 'Mayte Ruiz Santiago',
-    credentials: 'MD',
+    name: 'Mayte Ruiz Santiago, MD',
     image: '/image/WhatsApp Image 2026-02-24 at 8.00.23 PM.jpeg',
-    alt: 'Dr. Mayte Ruiz Santiago seated in her office.',
+    imageSize: { width: 1152, height: 768 },
+    bio: (
+      <>
+        Dr. Mayte Ruiz Santiago is a highly experienced, Board Certified psychiatrist based in Miami, FL, with a deep commitment to clinical
+        research and patient care. She earned her medical degree from the <strong>Instituto Superior de Ciencias Médicas de la Habana</strong> in
+        2012 and has since gained extensive expertise in treating mental health disorders including{' '}
+        <strong>Bipolar Disorder, OCD, Schizophrenia, and ADHD</strong>. She also has a strong focus on geriatric psychiatry and serves as
+        Principal Investigator at Magnum Medical Research.
+      </>
+    ),
+    credentials: [
+      {
+        title: 'Board Certified Psychiatrist (MD)',
+        detail: 'Licensed in Florida and specializing in complex psychiatric disorders across adult and geriatric populations.',
+      },
+      {
+        title: 'Principal Investigator – Magnum Medical Research',
+        detail: 'Leads clinical trials with precision and a patient-first approach, ensuring the highest ethical and regulatory standards.',
+      },
+    ],
   },
   {
-    name: 'Richard Tome',
-    credentials: 'PMH-NP',
-    image: '/image/team-placeholder.svg',
-    alt: 'Richard Tome, PMH-NP, psychiatric mental health nurse practitioner.',
+    name: 'Ivan Acevedo, APRN',
+    image: '/our/ivan.jpeg',
+    imageSize: { width: 1152, height: 1536 },
+    bio: (
+      <>
+        <strong>Ivan Acevedo, APRN, FNP-C</strong>, is a <strong>Family Nurse Practitioner</strong> specializing in{' '}
+        <strong>psychiatry care</strong> at <strong>Integrated Healthcare Group</strong> in <strong>Miami, Florida</strong>.
+        With over two years of experience, Ivan is dedicated to delivering compassionate and comprehensive mental health services to his patients.
+      </>
+    ),
+    credentials: [
+      {
+        title: 'Master of Science in Nursing (MSN)',
+        detail: <>Ivan earned his MSN from <strong>Walden University</strong>, equipping him with advanced clinical skills and knowledge in family practice.</>,
+      },
+      {
+        title: 'Certified Family Nurse Practitioner (FNP-C)',
+        detail: 'He holds the FNP-C certification, demonstrating his expertise in family nursing practice.',
+      },
+    ],
+  },
+  {
+    name: 'Yaisel Perea, APRN',
+    image: '/our/yaisell.webp',
+    imageSize: { width: 1152, height: 1152 },
+    bio: (
+      <>
+        <strong>Yaisel Perea, APRN, FNP</strong>, is a dedicated <strong>Family Nurse Practitioner</strong> specializing in{' '}
+        <strong>psychiatry</strong> at <strong>Integrated Health Care Group</strong> in <strong>Miami, Florida</strong>.
+        With over three years of clinical experience, Yaisel is committed to delivering compassionate and comprehensive mental health care to her patients.
+      </>
+    ),
+    credentials: [
+      {
+        title: 'Advanced Practice Registered Nurse (APRN)',
+        detail: 'Yaisel is a licensed APRN in the state of Florida, with a specialization in family practice and psychiatry.',
+      },
+      {
+        title: 'Family Nurse Practitioner (FNP)',
+        detail: 'She holds certification as a Family Nurse Practitioner, demonstrating her expertise in providing holistic care across the lifespan.',
+      },
+    ],
+  },
+  {
+    name: 'Richard Tome, PMH-NP',
+    image: '/our/richar.jpeg',
+    imageSize: { width: 1152, height: 1152 },
+    bio: (
+      <>
+        <strong>Richard Tome, PMH-NP</strong>, is a board-certified <strong>Psychiatric Mental Health Nurse Practitioner</strong> serving
+        patients at <strong>Integrated Health Care Group</strong> in <strong>Miami, Florida</strong>. With specialized training in diagnosing
+        and treating psychiatric disorders, Richard provides evidence-based, compassionate care to adolescents and adults experiencing a wide
+        range of mental health conditions.
+      </>
+    ),
+    credentials: [
+      {
+        title: 'Psychiatric Mental Health Nurse Practitioner (PMH-NP)',
+        detail: 'Richard holds certification in psychiatric mental health nursing, equipping him with specialized skills to assess, diagnose, and treat mental health disorders.',
+      },
+      {
+        title: 'Advanced Practice Registered Nurse (APRN)',
+        detail: 'He is a licensed APRN in the state of Florida, allowing him to provide advanced clinical care to his patients.',
+      },
+    ],
+  },
+  {
+    name: 'Dasniellis Zoque, APRN',
+    image: '/our/Dasniellis.jpeg',
+    imageSize: { width: 1152, height: 1152 },
+    bio: (<></>),
+    credentials: [],
+  },
+  {
+    name: 'Yolaine Sierra, APRN',
+    image: '/our/Yolaine.jpeg',
+    imageSize: { width: 1152, height: 1152 },
+    bio: (<></>),
+    credentials: [],
   },
 ];
+
+const therapyMembers = [
+  {
+    name: 'Modesto Ramos, RMHC',
+    image: '/our/logo.jpeg',
+    imageSize: { width: 1152, height: 1152 },
+    bio: (<></>),
+    credentials: [],
+  },
+  {
+    name: 'Marcela Abello, RMHC',
+    image: '/our/logo.jpeg',
+    imageSize: { width: 1152, height: 1152 },
+    bio: (<></>),
+    credentials: [],
+  },
+  {
+    name: 'Oscar Mas, LMHC',
+    image: '/our/logo.jpeg',
+    imageSize: { width: 1152, height: 1152 },
+    bio: (<></>),
+    credentials: [],
+  },
+];
+
+function TeamMemberCard({ member }: { member: typeof teamMembers[0] }) {
+  return (
+    <article
+      className="flex w-full flex-col overflow-hidden rounded-3xl bg-slate-50 shadow-sm md:flex-row"
+      style={{ flexBasis: '100%' }}
+    >
+      {/* Image */}
+      <div className="w-full shrink-0 md:w-64 lg:w-80">
+        <div className="relative h-72 w-full overflow-hidden md:h-full md:min-h-[380px]">
+          <Image
+            src={member.image}
+            alt={member.name}
+            width={member.imageSize.width}
+            height={member.imageSize.height}
+            className="h-full w-full object-cover object-top"
+          />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col justify-center p-8 md:p-10">
+        <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-stone-500 md:text-3xl">
+          {member.name}
+        </h3>
+
+        {member.bio && (
+          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+            {member.bio}
+          </p>
+        )}
+
+        {member.credentials.length > 0 && (
+          <>
+            <h4 className="mt-6 text-sm font-semibold uppercase tracking-widest text-slate-400">
+              Education &amp; Certification
+            </h4>
+            <div className="mt-3 flex flex-wrap gap-4">
+              {member.credentials.map((cred) => (
+                <div
+                  key={cred.title}
+                  className="flex-1 rounded-xl border border-slate-200 bg-white p-4"
+                  style={{ minWidth: '220px' }}
+                >
+                  <p className="text-sm font-semibold text-slate-700">{cred.title}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-slate-500">{cred.detail}</p>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </article>
+  );
+}
 
 export default function OurTeamPage() {
   return (
@@ -34,233 +197,107 @@ export default function OurTeamPage() {
         description="Meet our dedicated team of psychiatrists and providers committed to your mental wellness."
       />
 
-      <section className="bg-slate-50 py-20">
+      {/* Psychiatry Team Members */}
+      <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-center font-display text-4xl font-bold text-primary-700">Our Team</h2>
-            <p className="mx-auto mt-4 max-w-3xl text-center text-slate-600">
-              Updated clinical team. Temporary images are shown while official provider photos are being added.
-            </p>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="flex flex-wrap gap-10">
               {teamMembers.map((member) => (
-                <article key={member.name} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-                  <div className="relative h-64 w-full">
-                    <Image
-                      src={member.image ?? '/image/team-placeholder.svg'}
-                      alt={member.alt ?? `Temporary profile photo for ${member.name}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-slate-900">{member.name}</h3>
-                    <p className="mt-1 text-sm font-semibold uppercase tracking-[0.14em] text-primary-600">{member.credentials}</p>
-                  </div>
-                </article>
+                <TeamMemberCard key={member.name} member={member} />
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      {/* Therapy Section */}
+      <section className="bg-slate-50 py-20">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-5xl">
-            <article className="mb-12 rounded-3xl bg-slate-50 p-6 text-center md:p-10">
-              <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
-                <Image
-                  src="/image/WhatsApp Image 2026-02-24 at 8.00.24 PM.jpeg"
-                  alt="Ivan Acevedo, APRN"
-                  width={1152}
-                  height={1536}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
+          <div className="mx-auto max-w-6xl">
 
-              <h3 className="font-display text-4xl font-bold text-stone-500">Ivan Acevedo, APRN</h3>
-
-              <p className="mx-auto mt-8 max-w-4xl text-3xl leading-relaxed text-slate-600">
-                <strong>Ivan Acevedo, APRN, FNP-C</strong>, is a <strong>Family Nurse Practitioner</strong> specializing in
-                <strong> psychiatry care</strong> at <strong>Integrated Healthcare Group</strong> in <strong>Miami, Florida</strong>.
-                With over two years of experience, Ivan is dedicated to delivering compassionate and comprehensive mental
-                health services to his patients.
+            {/* Section Header */}
+            <div className="mb-12 text-center">
+              <h2 className="font-display text-4xl font-bold uppercase tracking-wide text-primary-700 mb-4">
+                Therapy Team
+              </h2>
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                Our licensed therapists and counselors provide compassionate, evidence-based therapy to support your mental health journey.
               </p>
-
-              <h4 className="mt-8 text-3xl font-semibold text-slate-700">Education and Certification:</h4>
-
-              <p className="mx-auto mt-6 max-w-4xl text-3xl leading-relaxed text-slate-600">
-                <strong>Master of Science in Nursing (MSN):</strong> Ivan earned his MSN from <strong>Walden University</strong>,
-                equipping him with advanced clinical skills and knowledge in family practice.
-              </p>
-
-              <p className="mx-auto mt-6 max-w-4xl text-3xl leading-relaxed text-slate-600">
-                <strong>Certified Family Nurse Practitioner (FNP-C):</strong> He holds the FNP-C certification, demonstrating
-                his expertise in family nursing practice.
-              </p>
-            </article>
-
-            <article className="rounded-3xl bg-slate-50 p-6 md:p-10 text-center">
-              <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
-                <Image
-                  src="/image/team-placeholder.svg"
-                  alt="Yaisel Perea, APRN"
-                  width={1152}
-                  height={1152}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-
-              <h3 className="font-display text-4xl font-bold text-stone-500">Yaisel Perea, APRN</h3>
-
-              <p className="mx-auto mt-8 max-w-4xl text-3xl leading-relaxed text-slate-600">
-                <strong>Yaisel Perea, APRN, FNP</strong>, is a dedicated <strong>Family Nurse Practitioner</strong>
-                specializing in <strong>psychiatry</strong> at <strong>Integrated Health Care Group</strong> in
-                <strong> Miami, Florida</strong>. With over three years of clinical experience, Yaisel is committed to
-                delivering compassionate and comprehensive mental health care to her patients.
-              </p>
-
-              <h4 className="mt-8 text-3xl font-semibold text-slate-700">Education and Certification:</h4>
-
-              <p className="mx-auto mt-6 max-w-4xl text-3xl leading-relaxed text-slate-600">
-                <strong>Advanced Practice Registered Nurse (APRN):</strong> Yaisel is a licensed APRN in the state of
-                Florida, with a specialization in family practice and psychiatry.
-              </p>
-
-              <p className="mx-auto mt-6 max-w-4xl text-3xl leading-relaxed text-slate-600">
-                <strong>Family Nurse Practitioner (FNP):</strong> She holds certification as a Family Nurse
-                Practitioner, demonstrating her expertise in providing holistic care across the lifespan.
-              </p>
-            </article>
-
-            <article className="mt-12 rounded-3xl bg-slate-50 p-6 text-center md:p-10">
-              <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
-                <Image
-                  src="/image/team-placeholder.svg"
-                  alt="Richard Tome, PMH-NP"
-                  width={1152}
-                  height={1152}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-
-              <h3 className="font-display text-4xl font-bold text-stone-500">Richard Tome, PMH-NP</h3>
-
-              <p className="mx-auto mt-8 max-w-4xl text-3xl leading-relaxed text-slate-600">
-                <strong>Richard Tome, PMH-NP</strong>, is a board-certified <strong>Psychiatric Mental Health Nurse Practitioner</strong>{' '}
-                serving patients at <strong>Integrated Health Care Group</strong> in <strong>Miami, Florida</strong>. With specialized
-                training in diagnosing and treating psychiatric disorders, Richard provides evidence-based, compassionate care to
-                adolescents and adults experiencing a wide range of mental health conditions.
-              </p>
-
-              <h4 className="mt-8 text-3xl font-semibold text-slate-700">Education and Certification:</h4>
-
-              <ul className="mx-auto mt-6 max-w-4xl list-disc space-y-4 pl-8 text-left text-3xl leading-relaxed text-slate-600">
-                <li>
-                  <strong>Psychiatric Mental Health Nurse Practitioner (PMH-NP):</strong> Richard holds certification in psychiatric
-                  mental health nursing, equipping him with specialized skills to assess, diagnose, and treat mental health disorders.
-                </li>
-                <li>
-                  <strong>Advanced Practice Registered Nurse (APRN):</strong> He is a licensed APRN in the state of Florida, allowing
-                  him to provide advanced clinical care to his patients.
-                </li>
-              </ul>
-            </article>
-
-            <article className="mt-12 rounded-3xl bg-slate-50 p-6 md:p-10 text-center">
-              <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-[3rem]">
-                <Image
-                  src="/image/WhatsApp Image 2026-02-24 at 8.00.23 PM.jpeg"
-                  alt="Dr. Mayte Ruiz Santiago in consultation office"
-                  width={1152}
-                  height={768}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-
-              <h3 className="font-display text-4xl font-bold uppercase tracking-wide text-stone-500">MAYTE RUIZ SANTIAGO, MD</h3>
-              <p className="mx-auto mt-8 max-w-4xl text-3xl leading-relaxed text-slate-600">
-                Dr. Mayte Ruiz Santiago is a highly experienced, Board Certified psychiatrist based in Miami, FL, with a deep commitment to
-                clinical research and patient care. She earned her medical degree from the Instituto Superior de Ciencias Médicas de la Habana
-                in 2012 and has since gained extensive expertise in the treatment of mental health disorders, including:
-              </p>
-
-              <ul className="mt-8 space-y-2 text-4xl font-bold leading-tight text-slate-700">
-                <li>Bipolar Disorder</li>
-                <li>Obsessive-Compulsive Disorder (OCD)</li>
-                <li>Schizophrenia</li>
-                <li>ADHD (Predominantly Inattentive Type)</li>
-              </ul>
-
-              <p className="mx-auto mt-8 max-w-5xl text-3xl leading-relaxed text-slate-600">
-                Dr. Ruiz Santiago also has a strong focus on geriatric psychiatry, ensuring comprehensive care for aging populations dealing
-                with complex mental health challenges. As the Principal Investigator at Magnum Medical Research, she leads our clinical trials
-                with precision, integrity, and a patient-first approach, ensuring that every study meets the highest ethical and regulatory
-                standards.
-              </p>
-            </article>
+              <div className="mt-6 mx-auto h-1 w-24 rounded-full bg-primary-500" />
+            </div>
+            <div className="flex flex-wrap gap-10">
+              {therapyMembers.map((member) => (
+                <TeamMemberCard key={member.name} member={member} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Team Overview */}
-      <section className="py-20 bg-white">
+      <section className="bg-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
-              <div className="bg-primary-50 rounded-2xl p-8">
-                <Users className="w-12 h-12 text-primary-500 mb-4" />
-                <h3 className="font-display text-2xl font-bold text-primary-700 mb-4">
-                  Expert Professionals
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Our team consists of board-certified psychiatrists and psychiatric nurse practitioners with extensive experience in treating a wide range of mental health conditions.
-                </p>
-              </div>
-
-              <div className="bg-accent-50 rounded-2xl p-8">
-                <Heart className="w-12 h-12 text-accent-500 mb-4" />
-                <h3 className="font-display text-2xl font-bold text-primary-700 mb-4">
-                  Compassionate Care
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Every member of our team is dedicated to providing empathetic, patient-centered care that respects your unique journey and individual needs.
-                </p>
-              </div>
-
-              <div className="bg-primary-50 rounded-2xl p-8">
-                <Award className="w-12 h-12 text-primary-500 mb-4" />
-                <h3 className="font-display text-2xl font-bold text-primary-700 mb-4">
-                  Evidence-Based Treatment
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  We utilize the latest clinical research and best practices to ensure you receive the most effective, up-to-date treatment available.
-                </p>
-              </div>
-
-              <div className="bg-accent-50 rounded-2xl p-8">
-                <Target className="w-12 h-12 text-accent-500 mb-4" />
-                <h3 className="font-display text-2xl font-bold text-primary-700 mb-4">
-                  Personalized Approach
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  We understand that every patient is unique. Our team works collaboratively to create customized treatment plans tailored to your specific needs and goals.
-                </p>
-              </div>
+          <div className="mx-auto max-w-5xl">
+            <div className="flex flex-wrap gap-8 mb-16">
+              {[
+                {
+                  icon: <Users className="w-10 h-10 text-primary-500" />,
+                  bg: 'bg-primary-50',
+                  title: 'Expert Professionals',
+                  titleColor: 'text-primary-700',
+                  text: 'Our team consists of board-certified psychiatrists and psychiatric nurse practitioners with extensive experience in treating a wide range of mental health conditions.',
+                },
+                {
+                  icon: <Heart className="w-10 h-10 text-accent-500" />,
+                  bg: 'bg-accent-50',
+                  title: 'Compassionate Care',
+                  titleColor: 'text-primary-700',
+                  text: 'Every member of our team is dedicated to providing empathetic, patient-centered care that respects your unique journey and individual needs.',
+                },
+                {
+                  icon: <Award className="w-10 h-10 text-primary-500" />,
+                  bg: 'bg-primary-50',
+                  title: 'Evidence-Based Treatment',
+                  titleColor: 'text-primary-700',
+                  text: 'We utilize the latest clinical research and best practices to ensure you receive the most effective, up-to-date treatment available.',
+                },
+                {
+                  icon: <Target className="w-10 h-10 text-accent-500" />,
+                  bg: 'bg-accent-50',
+                  title: 'Personalized Approach',
+                  titleColor: 'text-primary-700',
+                  text: 'We understand that every patient is unique. Our team works collaboratively to create customized treatment plans tailored to your specific needs and goals.',
+                },
+              ].map((card) => (
+                <div
+                  key={card.title}
+                  className={`${card.bg} flex-1 rounded-2xl p-8`}
+                  style={{ minWidth: '240px' }}
+                >
+                  {card.icon}
+                  <h3 className={`font-display text-xl font-bold ${card.titleColor} mt-4 mb-3`}>
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-sm">{card.text}</p>
+                </div>
+              ))}
             </div>
 
             {/* Team Philosophy */}
             <div className="bg-gradient-to-br from-primary-700 to-primary-500 text-white rounded-2xl p-10">
-              <h2 className="font-display text-3xl font-bold mb-6">
-                Our Commitment to You
-              </h2>
+              <h2 className="font-display text-3xl font-bold mb-6">Our Commitment to You</h2>
               <p className="text-lg leading-relaxed mb-4">
-                At Integrated Health Care Group Psychiatry, our team is united by a shared commitment to excellence, compassion, and integrity. We believe that mental health care should be accessible, respectful, and effective for everyone.
+                At Integrated Health Care Group Psychiatry, our team is united by a shared commitment to excellence, compassion, and integrity.
+                We believe that mental health care should be accessible, respectful, and effective for everyone.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                Our clinicians bring diverse backgrounds and specialties, allowing us to provide comprehensive care for a wide range of mental health conditions. From depression and anxiety to complex psychiatric disorders, we have the expertise and experience to help you achieve lasting wellness.
+                Our clinicians bring diverse backgrounds and specialties, allowing us to provide comprehensive care for a wide range of mental
+                health conditions. From depression and anxiety to complex psychiatric disorders, we have the expertise to help you achieve
+                lasting wellness.
               </p>
               <p className="text-lg leading-relaxed">
-                When you choose Integrated Health Care Group, you're not just getting a provider—you're gaining a partner in your healing journey. We're here to listen, support, and empower you every step of the way.
+                When you choose Integrated Health Care Group, you're not just getting a provider—you're gaining a partner in your healing
+                journey. We're here to listen, support, and empower you every step of the way.
               </p>
             </div>
           </div>
