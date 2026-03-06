@@ -384,7 +384,6 @@ export default function LocationsPage() {
         </div>
       </div>
 
-      {/* ── RIGHT MAP ── */}
       <div className="w-full lg:w-[58%] h-[500px] lg:h-screen sticky top-0 relative">
         <LoadScript googleMapsApiKey="AIzaSyB5gsEN5HLPh4Q9RdCImZZVR71A-cXkY2Y">
           <GoogleMap
