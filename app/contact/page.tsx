@@ -4,6 +4,58 @@ import { useState } from 'react';
 import { Phone, Mail, Printer, MessageSquare, Instagram, Music2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
+
+
+export const stores = [
+  {
+    id: 1,
+    name: "Hands of gold massage",
+    address: "Hotel sonata, Cl 44A #71 - 63, Laureles - Estadio, Medellín, Laureles",
+    lat: 6.25027,
+    lng: -75.59069,
+    open: "24/7",
+    phone: "+57 322 60 65 069",
+    email: "handsofgoldmassagemed@gmail.com",
+    services: ["Masajes", "Spa", "Relajación"],
+    features: ["WiFi", "Parking", "Accesible"],
+  },
+  {
+    id: 2,
+    name: "Hands of gold massage",
+    address: "Carrera 43B Cll. 10 – 38 El Poblado, Medellín, Colombia",
+    lat: 6.21092,
+    lng: -75.57069,
+    open: "24/7",
+    phone: "+57 322 60 65 069",
+    email: "handsofgoldmassagemed@gmail.com",
+    services: ["Masajes", "Spa", "Relajación"],
+    features: ["WiFi", "Parking", "Accesible"],
+  }
+];
+
+const mapStyles = [
+  {
+    featureType: "all",
+    elementType: "geometry",
+    stylers: [{ color: "green" }]
+  },
+  {
+    featureType: "water",
+    elementType: "geometry",
+    stylers: [{ color: "#c9e6f2" }]
+  },
+  {
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [{ color: "#ffffff" }]
+  },
+  {
+    featureType: "poi",
+    stylers: [{ visibility: "off" }]
+  },
+];
+
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,6 +64,16 @@ export default function ContactPage() {
     smsConsent: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+
+   const [selectedStore, setSelectedStore] = useState<any>(stores[0]);
+  const [hoveredStore, setHoveredStore] = useState<number | null>(null);
+ 
+ const center = {
+  lat: 6.2442,
+  lng: -75.5812,
+};
+
 
  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
@@ -263,6 +325,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      
     </>
   );
 }
