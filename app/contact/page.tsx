@@ -13,15 +13,46 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    alert('Thank you for contacting us! We will be in touch soon.');
-    setFormData({ name: '', email: '', phone: '', smsConsent: false });
-    setIsSubmitting(false);
-  };
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  // Validar consentimiento SMS
+  if (!formData.smsConsent) {
+    alert("You must agree to receive SMS messages before submitting the form.");
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        smsConsent: formData.smsConsent,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Thank you for contacting us! We will be in touch soon.");
+      setFormData({ name: "", email: "", phone: "", smsConsent: false });
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error sending form:", error);
+    alert("Error sending message.");
+  }
+
+  setIsSubmitting(false);
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -185,10 +216,9 @@ export default function ContactPage() {
                     </span>
                   </label>
                 </div>
-
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={!formData.smsConsent || isSubmitting}
                   className="w-full bg-primary-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-600 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -198,14 +228,11 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-display text-4xl font-bold text-center text-primary-700 mb-12">
             Frequently Asked Questions
           </h2>
-          
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-bold text-xl text-primary-700 mb-3">
