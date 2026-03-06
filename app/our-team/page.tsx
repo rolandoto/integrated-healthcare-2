@@ -95,6 +95,13 @@ const teamMembers = [
     ],
   },
   {
+    name: 'Lisyen Pérez, PMHNP',
+    image: '/our/Lisyen.jpeg',
+    imageSize: { width: 1152, height: 1152 },
+    bio: (<></>),
+    credentials: [],
+  },
+  {
     name: 'Dasniellis Zoque, APRN',
     image: '/our/Dasniellis.jpeg',
     imageSize: { width: 1152, height: 1152 },
