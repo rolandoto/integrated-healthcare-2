@@ -75,9 +75,9 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:info@integratedhealthcaregroup.com" className="inline-flex items-center gap-2 transition-colors hover:text-white">
+              <a href="mailto:psychiatry@integratedhealthcare.group" className="inline-flex items-center gap-2 transition-colors hover:text-white">
                 <Mail className="h-4 w-4 text-primary-300" />
-                info@integratedhealthcaregroup.com
+                psychiatry@integratedhealthcare.group
               </a>
             </li>
             <li className="inline-flex items-start gap-2 text-slate-400">
