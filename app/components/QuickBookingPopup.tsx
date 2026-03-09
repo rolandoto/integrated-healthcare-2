@@ -32,9 +32,9 @@ export default function QuickBookingPopup() {
           <CalendarCheck2 className="h-6 w-6" />
         </div>
 
-        <h3 className="mt-4 text-2xl font-bold text-primary-800">¿Quieres reservar más rápido?</h3>
+        <h3 className="mt-4 text-2xl font-bold text-primary-800">Want to book faster?</h3>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Ve directo a nuestra página de contacto y agenda tu cita en menos tiempo.
+          Go straight to our contact page and schedule your appointment in less time.
         </p>
 
         <div className="mt-5 flex flex-col gap-2 sm:flex-row">
@@ -43,14 +43,14 @@ export default function QuickBookingPopup() {
             onClick={() => setIsOpen(false)}
             className="inline-flex flex-1 items-center justify-center rounded-full bg-primary-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-800"
           >
-            Ir a Contact
+            Go to Contact
           </Link>
           <button
             type="button"
             onClick={() => setIsOpen(false)}
             className="inline-flex flex-1 items-center justify-center rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
           >
-            Ahora no
+            Not now
           </button>
         </div>
       </div>
