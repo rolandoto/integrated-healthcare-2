@@ -118,9 +118,9 @@ const teamMembers = [
       <>
         <strong>Dasniellis Zoque, APRN</strong> is a dedicated psychiatric <strong>Advanced Practice Registered Nurse</strong> committed to
         delivering compassionate, evidence-based mental health care. She specializes in the <strong>evaluation and management</strong> of a
-        wide range of psychiatric conditions, partnering with patients to create personalized treatment plans that promote emotional balance,
-        resilience, and overall well-being. At <strong>Integrated Healthcare Services</strong>, she is passionate about helping patients make
-        meaningful progress and achieve long-term mental wellness through collaborative, patient-centered care.
+        wide range of psychiatric conditions, working closely with patients to create personalized treatment plans that support emotional
+        balance, resilience, and overall well-being. At <strong>Integrated Healthcare Services</strong>, Daphne is passionate about helping
+        patients achieve meaningful progress and long-term mental wellness through collaborative and patient-centered care.
       </>
     ),
     credentials: [],
