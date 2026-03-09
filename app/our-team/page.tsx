@@ -95,24 +95,49 @@ const teamMembers = [
     ],
   },
   {
-    name: 'Lisyen Pérez, PMHNP',
+    name: 'Lisyen Perez, PMHNP',
     image: '/our/Lisyen.jpeg',
     imageSize: { width: 1152, height: 1152 },
-    bio: (<></>),
+    bio: (
+      <>
+        <strong>Lisyen Perez, PMHNP</strong> is a <strong>Psychiatric Mental Health Nurse Practitioner</strong> dedicated to providing
+        compassionate, patient-centered mental health care. She specializes in the <strong>evaluation, diagnosis, and treatment</strong> of
+        a wide range of psychiatric conditions, working closely with patients to build personalized treatment plans that support emotional
+        well-being and overall quality of life. At <strong>Integrated Healthcare Services</strong>, Liz is committed to delivering
+        evidence-based care in a supportive and collaborative environment to help patients achieve stability, resilience, and long-term
+        wellness.
+      </>
+    ),
     credentials: [],
   },
   {
     name: 'Dasniellis Zoque, APRN',
     image: '/our/Dasniellis.jpeg',
     imageSize: { width: 1152, height: 1152 },
-    bio: (<></>),
+    bio: (
+      <>
+        <strong>Dasniellis Zoque, APRN</strong> is a dedicated psychiatric <strong>Advanced Practice Registered Nurse</strong> committed to
+        delivering compassionate, evidence-based mental health care. She specializes in the <strong>evaluation and management</strong> of a
+        wide range of psychiatric conditions, partnering with patients to create personalized treatment plans that promote emotional balance,
+        resilience, and overall well-being. At <strong>Integrated Healthcare Services</strong>, she is passionate about helping patients make
+        meaningful progress and achieve long-term mental wellness through collaborative, patient-centered care.
+      </>
+    ),
     credentials: [],
   },
   {
     name: 'Yolaine Sierra, APRN',
     image: '/our/Yolaine.jpeg',
     imageSize: { width: 1152, height: 1152 },
-    bio: (<></>),
+    bio: (
+      <>
+        <strong>Yolaine Sierra, APRN</strong> is an <strong>Advanced Practice Registered Nurse</strong> dedicated to psychiatric care, with
+        extensive experience in <strong>inpatient psychiatry and geriatric mental health</strong>. She specializes in the assessment and
+        management of complex psychiatric conditions, particularly in older adults, and brings a thoughtful, compassionate approach to every
+        patient encounter. At <strong>Integrated Healthcare Services</strong>, Yolaine is committed to evidence-based, patient-centered
+        treatment that promotes stability, dignity, and improved quality of life.
+      </>
+    ),
     credentials: [],
   },
 ];
