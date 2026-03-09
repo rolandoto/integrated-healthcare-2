@@ -133,9 +133,9 @@ const teamMembers = [
       <>
         <strong>Yolaine Sierra, APRN</strong> is an <strong>Advanced Practice Registered Nurse</strong> dedicated to psychiatric care, with
         extensive experience in <strong>inpatient psychiatry and geriatric mental health</strong>. She specializes in the assessment and
-        management of complex psychiatric conditions, particularly in older adults, and brings a thoughtful, compassionate approach to every
-        patient encounter. At <strong>Integrated Healthcare Services</strong>, Yolaine is committed to evidence-based, patient-centered
-        treatment that promotes stability, dignity, and improved quality of life.
+        management of complex psychiatric conditions, particularly in older adults, bringing a thoughtful and compassionate approach to
+        patient care. At <strong>Integrated Healthcare Services</strong>, Yolaine is committed to delivering evidence-based, patient-centered
+        treatment that promotes stability, dignity, and improved quality of life for every patient she serves.
       </>
     ),
     credentials: [],
