@@ -50,24 +50,24 @@ const teamMembers = [
     ],
   },
   {
-    name: 'Yaisel Perea, APRN',
+    name: 'Yaisel Perea, PMH-NP',
     image: '/our/yaisell.webp',
     imageSize: { width: 1152, height: 1152 },
     bio: (
       <>
-        <strong>Yaisel Perea, APRN, FNP</strong>, is a dedicated <strong>Family Nurse Practitioner</strong> specializing in{' '}
+        <strong>Yaisel Perea, PMH-NP</strong>, is a dedicated <strong>Psychiatric Mental Health Nurse Practitioner</strong> specializing in{' '}
         <strong>psychiatry</strong> at <strong>Integrated Health Care Group</strong> in <strong>Miami, Florida</strong>.
         With over three years of clinical experience, Yaisel is committed to delivering compassionate and comprehensive mental health care to her patients.
       </>
     ),
     credentials: [
       {
-        title: 'Advanced Practice Registered Nurse (APRN)',
-        detail: 'Yaisel is a licensed APRN in the state of Florida, with a specialization in family practice and psychiatry.',
+        title: 'Psychiatric Mental Health Nurse Practitioner (PMH-NP)',
+        detail: 'Yaisel is certified as a PMH-NP, with a specialization in psychiatric evaluation and treatment.',
       },
       {
-        title: 'Family Nurse Practitioner (FNP)',
-        detail: 'She holds certification as a Family Nurse Practitioner, demonstrating her expertise in providing holistic care across the lifespan.',
+        title: 'Advanced Practice Registered Nurse (APRN)',
+        detail: 'She is a licensed APRN in the state of Florida, supporting comprehensive, patient-centered psychiatric care.',
       },
     ],
   },
