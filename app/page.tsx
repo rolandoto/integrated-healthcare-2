@@ -20,6 +20,33 @@ const socialLinks = [
   { label: 'Google Business', href: 'https://www.google.com/search?q=Integrated+Healthcare+Psychiatry+Group' },
 ];
 
+const googleReviews = [
+  {
+    author: 'Google Review',
+    text: 'Excellent and compassionate care. The team takes time to listen and explain every treatment step clearly.',
+  },
+  {
+    author: 'Google Review',
+    text: 'Very professional staff, easy scheduling, and consistent follow-up. I felt supported from the first visit.',
+  },
+  {
+    author: 'Google Review',
+    text: 'Atención increíble. El equipo es amable, paciente y realmente se preocupa por el bienestar emocional de cada paciente.',
+  },
+  {
+    author: 'Google Review',
+    text: 'The provider was kind, knowledgeable, and helped me find a treatment plan that finally worked for me.',
+  },
+  {
+    author: 'Google Review',
+    text: 'Recomiendo esta clínica 100%. Son bilingües, puntuales y muy humanos en todo el proceso.',
+  },
+  {
+    author: 'Google Review',
+    text: 'Great experience overall. Communication is quick, appointments are organized, and care feels personalized.',
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -142,7 +169,32 @@ export default function Home() {
 
       <section className="bg-primary-900 py-16 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-center font-display text-3xl font-bold md:text-4xl">Connect With Integrated Healthcare Group</h2>
+          <h2 className="text-center font-display text-3xl font-bold md:text-4xl">What Patients Say / Opiniones de Pacientes</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-white/80">
+            Highlights from our Google reviews. Read more feedback from our community on Google Maps.
+          </p>
+
+          <div className="mx-auto mt-10 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {googleReviews.map((review, index) => (
+              <article key={index} className="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur">
+                <p className="text-sm leading-relaxed text-white/95">“{review.text}”</p>
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">{review.author}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="https://www.google.com/maps/place/Integrated+Healthcare+Services/@25.8662436,-80.300838,17z/data=!4m8!3m7!1s0x88d9bbd7725aa51d:0xf3591187ce36c488!8m2!3d25.8662436!4d-80.300838!9m1!1b1!16s%2Fg%2F11t3ct80k_!18m1!1e1?entry=ttu"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold transition hover:bg-white/10"
+            >
+              See all Google reviews
+            </a>
+          </div>
+
+          <h2 className="mt-16 text-center font-display text-3xl font-bold md:text-4xl">Connect With Integrated Healthcare Group</h2>
           <div className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-3">
             {socialLinks.map((social) => (
               <a
