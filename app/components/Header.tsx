@@ -28,6 +28,10 @@ export default function Header() {
     const storedLanguage = window.localStorage.getItem('site-language');
     if (storedLanguage === 'es' || storedLanguage === 'en') {
       setLanguage(storedLanguage);
+      document.documentElement.lang = storedLanguage;
+
+      document.cookie = `googtrans=/en/${storedLanguage}; path=/`;
+      document.cookie = `googtrans=/en/${storedLanguage}; domain=${window.location.hostname}; path=/`;
     }
   }, []);
 
@@ -49,7 +53,7 @@ export default function Header() {
 
  
   const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === 'es' ? 'en' : 'es'));
+    applyLanguage(language === 'es' ? 'en' : 'es');
   };
 
   return (
