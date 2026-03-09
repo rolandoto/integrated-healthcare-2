@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Phone, Target, Eye, HeartHandshake, Activity, Users, ShieldCheck } from 'lucide-react';
+import QuickBookingPopup from './components/QuickBookingPopup';
 
 const coreActivities = [
   'Comprehensive psychiatric evaluations and DSM-5-TR aligned diagnostic reassessments.',
@@ -22,6 +23,7 @@ const socialLinks = [
 export default function Home() {
   return (
     <>
+      <QuickBookingPopup />
       <section className="relative flex min-h-[520px] items-center justify-center overflow-hidden text-white">
         <div className="absolute inset-0 bg-[url('/image/home.jpeg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/85" />
