@@ -102,10 +102,10 @@ const teamMembers = [
       <>
         <strong>Lisyen Perez, PMHNP</strong> is a <strong>Psychiatric Mental Health Nurse Practitioner</strong> dedicated to providing
         compassionate, patient-centered mental health care. She specializes in the <strong>evaluation, diagnosis, and treatment</strong> of
-        a wide range of psychiatric conditions, working closely with patients to build personalized treatment plans that support emotional
-        well-being and overall quality of life. At <strong>Integrated Healthcare Services</strong>, Liz is committed to delivering
-        evidence-based care in a supportive and collaborative environment to help patients achieve stability, resilience, and long-term
-        wellness.
+        a wide range of psychiatric conditions, working closely with patients to develop personalized treatment plans that support their
+        emotional well-being and overall quality of life. At <strong>Integrated Healthcare Services</strong>, Liz is committed to delivering
+        evidence-based care in a supportive and collaborative environment, helping patients achieve stability, resilience, and long-term
+        mental wellness.
       </>
     ),
     credentials: [],
