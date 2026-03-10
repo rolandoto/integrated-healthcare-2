@@ -21,15 +21,11 @@ export default async function LocaleLayout({children, params}: {children: React.
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className="antialiased">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <WhatsAppFloatButton />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <Header />
+      <main className="min-h-screen">{children}</main>
+      <Footer />
+      <WhatsAppFloatButton />
+    </NextIntlClientProvider>
   );
 }
