@@ -1,11 +1,15 @@
+import {useLocale} from 'next-intl';
 import PageHero from '../components/PageHero';
 
 export default function TermsConditionsPage() {
+  const locale = useLocale();
+  const hero = locale === 'es' ? {title: 'Términos y Condiciones', description: 'Por favor revisa estos términos antes de usar nuestro sitio web, servicios o comunicaciones por SMS.'} : {title: 'Terms & Conditions', description: 'Please review these terms carefully before using our website, services, or SMS communications.'};
+
   return (
     <>
       <PageHero
-        title="Terms & Conditions"
-        description="Please review these terms carefully before using our website, services, or SMS communications."
+        title={hero.title}
+        description={hero.description}
         footerText="Effective Date: January 1, 2024"
       />
 
