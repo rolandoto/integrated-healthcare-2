@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import {useLocale} from 'next-intl';
 import {Users, Award, Heart, Target} from 'lucide-react';

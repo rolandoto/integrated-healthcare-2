@@ -1,3 +1,5 @@
+'use client';
+
 import {useLocale} from 'next-intl';
 import { CheckCircle2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
