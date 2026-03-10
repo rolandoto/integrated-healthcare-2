@@ -1,12 +1,16 @@
+import {useLocale} from 'next-intl';
 import { Video, Shield, Clock, Globe } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function TelemedicinePage() {
+  const locale = useLocale();
+  const hero = locale === 'es' ? {title: 'Servicios de Telemedicina', description: 'Atención de salud mental de calidad desde la comodidad y privacidad de tu hogar'} : {title: 'TeleMedicine Services', description: 'Quality mental health care from the comfort and privacy of your own home'};
+
   return (
     <>
       <PageHero
-        title="TeleMedicine Services"
-        description="Quality mental health care from the comfort and privacy of your own home"
+        title={hero.title}
+        description={hero.description}
       />
 
       {/* Benefits Section */}
