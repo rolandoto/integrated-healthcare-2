@@ -1,0 +1,39 @@
+{
+  "Header": {
+    "hours": "Lun - Sáb: 9:00 AM - 5:00 PM",
+    "location": "Condado Miami-Dade, Florida",
+    "homeAria": "Inicio de Integrated Health Care Group",
+    "toggleLanguage": "Cambiar idioma",
+    "policies": "Políticas",
+    "privacyPolicy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "scheduleVisit": "Agendar cita",
+    "toggleMenu": "Abrir menú de navegación",
+    "nav": {
+      "home": "Inicio",
+      "team": "Nuestro Equipo",
+      "services": "Servicios",
+      "telemedicine": "Telemedicina",
+      "insurance": "Seguros",
+      "locations": "Ubicaciones",
+      "blog": "Blog",
+      "contact": "Contacto"
+    }
+  },
+  "Footer": {
+    "description": "Servicios psiquiátricos y de salud mental con compasión para niños, adultos y familias.",
+    "quickLinks": "Enlaces Rápidos",
+    "home": "Inicio",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "locations": "Ubicaciones",
+    "contactTitle": "Contacto",
+    "social": "Redes Sociales",
+    "copyright": "© 2026 Integrated Health Care Group. Todos los derechos reservados.",
+    "hipaa": "Procesos compatibles con HIPAA y estándares seguros de comunicación con pacientes."
+  },
+  "WhatsApp": {
+    "aria": "Chatear por WhatsApp",
+    "message": "Hola, me gustaría recibir más información."
+  }
+}

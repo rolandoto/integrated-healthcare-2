@@ -1,4 +1,5 @@
 "use client"
+import {useLocale} from 'next-intl';
 import { MapPin, Clock, Phone, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import PageHero from '../components/PageHero';
@@ -155,6 +156,9 @@ interface Props {
 
 
 export default function LocationsPage() {
+  const locale = useLocale();
+  const hero = locale === 'es' ? {title: 'Nuestras Ubicaciones', description: 'Convenientemente ubicados en todo Miami-Dade'} : {title: 'Our Locations', description: 'Conveniently located throughout Miami-Dade County'};
+
 
 
  const [selectedStore, setSelectedStore] = useState<Store | null>(null);
@@ -196,8 +200,8 @@ export default function LocationsPage() {
   return (
     <>
       <PageHero
-        title="Our Locations"
-        description="Conveniently located throughout Miami-Dade County"
+        title={hero.title}
+        description={hero.description}
       />
 
 
