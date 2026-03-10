@@ -1,6 +1,5 @@
 import type {Metadata} from 'next';
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages, setRequestLocale} from 'next-intl/server';
+import {setRequestLocale} from 'next-intl/server';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import WhatsAppFloatButton from '../components/WhatsAppFloatButton';
@@ -18,14 +17,13 @@ export function generateStaticParams() {
 export default async function LocaleLayout({children, params}: {children: React.ReactNode; params: Promise<{locale: string}>}) {
   const {locale} = await params;
   setRequestLocale(locale);
-  const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <>
       <Header />
       <main className="min-h-screen">{children}</main>
       <Footer />
       <WhatsAppFloatButton />
-    </NextIntlClientProvider>
+    </>
   );
 }
