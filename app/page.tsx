@@ -11,7 +11,7 @@ const coreActivities = [
   'Relapse prevention, clinical stabilization, and functional rehabilitation planning.',
   'Ethics, quality improvement, and outcomes-oriented continuous care.',
 ];
-
+//sjdhajsjdksa
 const socialLinks = [
   { label: 'WhatsApp', href: 'https://wa.me/17868934315' },
   { label: 'TikTok', href: 'https://www.tiktok.com/@integratedhcg' },
