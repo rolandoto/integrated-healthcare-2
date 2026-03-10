@@ -18,40 +18,64 @@ const navigationLinks = [
 
 type SiteLanguage = 'es' | 'en';
 
+const LANGUAGE_STORAGE_KEY = 'site-language';
+const DEFAULT_LANGUAGE: SiteLanguage = 'en';
+
+const writeGoogleTranslateCookies = (targetLanguage: SiteLanguage) => {
+  const cookieValue = `/en/${targetLanguage}`;
+  const hostname = window.location.hostname;
+
+  document.cookie = `googtrans=${cookieValue}; path=/`;
+
+  if (hostname.includes('.')) {
+    document.cookie = `googtrans=${cookieValue}; domain=.${hostname}; path=/`;
+  }
+};
+
+const applyGoogleTranslateSelection = (targetLanguage: SiteLanguage) => {
+  const translateSelect = document.querySelector<HTMLSelectElement>('.goog-te-combo');
+
+  if (!translateSelect) {
+    return false;
+  }
+
+  translateSelect.value = targetLanguage;
+  translateSelect.dispatchEvent(new Event('change'));
+  return true;
+};
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFaqsOpen, setIsFaqsOpen] = useState(false);
-
-  const [language, setLanguage] = useState<SiteLanguage>('es');
-
-  useEffect(() => {
-    const storedLanguage = window.localStorage.getItem('site-language');
-    if (storedLanguage === 'es' || storedLanguage === 'en') {
-      setLanguage(storedLanguage);
-      document.documentElement.lang = storedLanguage;
-
-      document.cookie = `googtrans=/en/${storedLanguage}; path=/`;
-      document.cookie = `googtrans=/en/${storedLanguage}; domain=${window.location.hostname}; path=/`;
-    }
-  }, []);
+  const [language, setLanguage] = useState<SiteLanguage>(DEFAULT_LANGUAGE);
 
   const applyLanguage = (nextLanguage: SiteLanguage) => {
     setLanguage(nextLanguage);
-    window.localStorage.setItem('site-language', nextLanguage);
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage);
 
-    document.cookie = `googtrans=/en/${nextLanguage}; path=/`;
-    document.cookie = `googtrans=/en/${nextLanguage}; domain=${window.location.hostname}; path=/`;
+    document.documentElement.lang = nextLanguage;
+    writeGoogleTranslateCookies(nextLanguage);
 
-    if (nextLanguage === 'en') {
-      document.documentElement.lang = 'en';
-    } else {
-      document.documentElement.lang = 'es';
+    if (!applyGoogleTranslateSelection(nextLanguage)) {
+      window.location.reload();
     }
-
-    window.location.reload();
   };
 
- 
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    const initialLanguage: SiteLanguage = storedLanguage === 'es' || storedLanguage === 'en' ? storedLanguage : DEFAULT_LANGUAGE;
+
+    setLanguage(initialLanguage);
+    document.documentElement.lang = initialLanguage;
+    writeGoogleTranslateCookies(initialLanguage);
+
+    const timerId = window.setTimeout(() => {
+      applyGoogleTranslateSelection(initialLanguage);
+    }, 500);
+
+    return () => window.clearTimeout(timerId);
+  }, []);
+
   const toggleLanguage = () => {
     applyLanguage(language === 'es' ? 'en' : 'es');
   };
