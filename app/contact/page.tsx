@@ -1,5 +1,6 @@
 'use client';
 
+import {useLocale} from 'next-intl';
 import { useState } from 'react';
 import { Phone, Mail, Printer, MessageSquare, Instagram, Music2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
@@ -7,6 +8,9 @@ import PageHero from '../components/PageHero';
 
 
 export default function ContactPage() {
+  const locale = useLocale();
+  const hero = locale === 'es' ? {title: '¡CONTÁCTANOS!', description: 'Completa el formulario con detalles sobre tu consulta, preocupaciones de salud mental, seguro médico o cualquier duda. Nuestro equipo está para apoyarte en cada paso.'} : {title: 'CONTACT US!', description: 'Please complete the form below with details about your consultation request, mental health concerns, insurance information, or any questions you may have. Our team is here to support you every step of the way.'};
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -70,8 +74,8 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        title="CONTACT US!"
-        description="Please complete the form below with details about your consultation request, mental health concerns, insurance information, or any questions you may have. Our team is here to support you every step of the way."
+        title={hero.title}
+        description={hero.description}
         compact
       />
 

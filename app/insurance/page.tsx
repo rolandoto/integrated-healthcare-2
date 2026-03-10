@@ -1,7 +1,13 @@
+'use client';
+
+import {useLocale} from 'next-intl';
 import { CheckCircle, FileText, Phone } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function InsurancePage() {
+  const locale = useLocale();
+  const hero = locale === 'es' ? {title: 'Seguros y Opciones de Pago', description: 'Aceptamos la mayoría de planes de seguro principales y ofrecemos opciones de pago flexibles'} : {title: 'Insurance & Payment Options', description: 'We accept most major insurance plans and offer flexible payment options'};
+
   const insuranceProviders = [
     'Aetna',
     'Blue Cross Blue Shield',
@@ -18,8 +24,8 @@ export default function InsurancePage() {
   return (
     <>
       <PageHero
-        title="Insurance & Payment Options"
-        description="We accept most major insurance plans and offer flexible payment options"
+        title={hero.title}
+        description={hero.description}
       />
 
       <section className="py-20 bg-white">

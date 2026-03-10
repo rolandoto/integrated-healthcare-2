@@ -1,3 +1,6 @@
+'use client';
+
+import {useLocale} from 'next-intl';
 import { CheckCircle2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
@@ -96,11 +99,14 @@ function ServiceColumn({
 }
 
 export default function ServicesPage() {
+  const locale = useLocale();
+  const hero = locale === 'es' ? {title: 'Nuestros Servicios', description: 'Integrated Healthcare ofrece servicios psiquiátricos integrales y basados en evidencia, con rigor clínico, compasión y continuidad de atención.'} : {title: 'Our Services / Nuestros Servicios', description: 'Integrated Healthcare Psychiatric Group delivers comprehensive, evidence-based psychiatric services with clinical rigor, compassion, and continuity of care focused on symptom control and long-term functional recovery.'};
+
   return (
     <>
       <PageHero
-        title="Our Services / Nuestros Servicios"
-        description="Integrated Healthcare Psychiatric Group delivers comprehensive, evidence-based psychiatric services with clinical rigor, compassion, and continuity of care focused on symptom control and long-term functional recovery."
+        title={hero.title}
+        description={hero.description}
       />
 
       <section className="bg-gray-50 py-20">

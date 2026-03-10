@@ -1,11 +1,17 @@
+'use client';
+
+import {useLocale} from 'next-intl';
 import PageHero from '../components/PageHero';
 
 export default function PrivacyPolicyPage() {
+  const locale = useLocale();
+  const hero = locale === 'es' ? {title: 'Política de Privacidad', description: 'Tu privacidad y confidencialidad son nuestras máximas prioridades'} : {title: 'Privacy Policy', description: 'Your privacy and confidentiality are our top priorities'};
+
   return (
     <>
       <PageHero
-        title="Privacy Policy"
-        description="Your privacy and confidentiality are our top priorities"
+        title={hero.title}
+        description={hero.description}
         footerText="Effective Date: January 1, 2024 · Last Updated: May 3, 2025"
       />
 

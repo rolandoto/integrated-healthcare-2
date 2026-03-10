@@ -1,15 +1,19 @@
-const WHATSAPP_NUMBER = "17868934315";
-const WHATSAPP_MESSAGE = "Hi welcome";
+'use client';
+
+import {useTranslations} from 'next-intl';
+
+const WHATSAPP_NUMBER = '17868934315';
 
 export default function WhatsAppFloatButton() {
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+  const t = useTranslations('WhatsApp');
+  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t('message'))}`;
 
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
+      aria-label={t('aria')}
       className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-[#20ba5a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
     >
       <svg viewBox="0 0 32 32" className="h-7 w-7" aria-hidden="true" fill="currentColor">

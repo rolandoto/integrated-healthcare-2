@@ -1,8 +1,21 @@
+'use client';
+
 import Link from 'next/link';
 import { Calendar, User } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import {useLocale} from 'next-intl';
 
 export default function BlogPage() {
+  const locale = useLocale();
+  const copy = locale === 'es'
+    ? {
+        title: 'Blog y Recursos',
+        description: 'Últimos consejos, noticias y recursos sobre salud mental y bienestar'
+      }
+    : {
+        title: 'Blog & Resources',
+        description: 'Latest insights, tips, and news about mental health and wellness'
+      };
   const blogPosts = [
     {
       title: 'Traumas & PTSD',
@@ -23,8 +36,8 @@ export default function BlogPage() {
   return (
     <>
       <PageHero
-        title="Blog & Resources"
-        description="Latest insights, tips, and news about mental health and wellness"
+        title={copy.title}
+        description={copy.description}
       />
 
       <section className="py-20 bg-gray-50">

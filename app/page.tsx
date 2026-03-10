@@ -1,6 +1,4 @@
-import Link from 'next/link';
-import { Phone, Target, Eye, HeartHandshake, Activity, Users, ShieldCheck } from 'lucide-react';
-import QuickBookingPopup from './components/QuickBookingPopup';
+import {redirect} from '../i18n/navigation';
 
 const coreActivities = [
   'Comprehensive psychiatric evaluations and DSM-5-TR aligned diagnostic reassessments.',
