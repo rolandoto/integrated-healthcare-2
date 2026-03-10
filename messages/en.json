@@ -1,0 +1,39 @@
+{
+  "Header": {
+    "hours": "Mon - Sat: 9:00 AM - 5:00 PM",
+    "location": "Miami-Dade County, Florida",
+    "homeAria": "Integrated Health Care Group home",
+    "toggleLanguage": "Toggle language",
+    "policies": "Policies",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "scheduleVisit": "Schedule Visit",
+    "toggleMenu": "Toggle navigation menu",
+    "nav": {
+      "home": "Home",
+      "team": "Our Team",
+      "services": "Services",
+      "telemedicine": "Telemedicine",
+      "insurance": "Insurance",
+      "locations": "Locations",
+      "blog": "Blog",
+      "contact": "Contact"
+    }
+  },
+  "Footer": {
+    "description": "Compassionate psychiatric and mental health services for children, adults, and families.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "services": "Services",
+    "contact": "Contact",
+    "locations": "Locations",
+    "contactTitle": "Contact",
+    "social": "Social",
+    "copyright": "© 2026 Integrated Health Care Group. All rights reserved.",
+    "hipaa": "HIPAA-compliant processes and secure patient communication standards."
+  },
+  "WhatsApp": {
+    "aria": "Chat on WhatsApp",
+    "message": "Hi, I would like to get more information."
+  }
+}

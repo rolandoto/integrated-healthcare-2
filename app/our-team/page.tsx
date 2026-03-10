@@ -1,3 +1,4 @@
+import {useLocale} from 'next-intl';
  import Image from 'next/image';
 import { Users, Award, Heart, Target } from 'lucide-react';
 import PageHero from '../components/PageHero';
@@ -222,11 +223,14 @@ function TeamMemberCard({ member }: { member: typeof teamMembers[0] }) {
 }
 
 export default function OurTeamPage() {
+  const locale = useLocale();
+  const hero = locale === 'es' ? {title: 'Nuestro Equipo', description: 'Conoce a nuestro equipo de psiquiatras y profesionales dedicados a tu bienestar mental.'} : {title: 'Our Team', description: 'Meet our dedicated team of psychiatrists and providers committed to your mental wellness.'};
+
   return (
     <>
       <PageHero
-        title="Our Team"
-        description="Meet our dedicated team of psychiatrists and providers committed to your mental wellness."
+        title={hero.title}
+        description={hero.description}
       />
 
       {/* Psychiatry Team Members */}
