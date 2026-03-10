@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Calendar, User } from 'lucide-react';
 import PageHero from '../components/PageHero';
