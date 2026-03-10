@@ -1,3 +1,5 @@
+'use client';
+
 import {useLocale} from 'next-intl';
 import PageHero from '../components/PageHero';
 

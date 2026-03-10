@@ -1,3 +1,5 @@
+'use client';
+
 import {useLocale} from 'next-intl';
 import { Video, Shield, Clock, Globe } from 'lucide-react';
 import PageHero from '../components/PageHero';

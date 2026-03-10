@@ -1,13 +1,15 @@
 import './globals.css';
 import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 
 export default async function RootLayout({children}: {children: React.ReactNode}) {
-  const messages = (await import('../messages/en.json')).default;
+  const locale = await getLocale();
+  const messages = await getMessages();
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className="antialiased">
-        <NextIntlClientProvider locale="en" messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
