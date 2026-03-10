@@ -1,0 +1,85 @@
+{
+  "Header": {
+    "hours": "Lun - Sáb: 9:00 AM - 5:00 PM",
+    "location": "Condado Miami-Dade, Florida",
+    "homeAria": "Inicio de Integrated Health Care Group",
+    "toggleLanguage": "Cambiar idioma",
+    "policies": "Políticas",
+    "privacyPolicy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "scheduleVisit": "Agendar cita",
+    "toggleMenu": "Abrir menú de navegación",
+    "nav": {
+      "home": "Inicio",
+      "team": "Nuestro Equipo",
+      "services": "Servicios",
+      "telemedicine": "Telemedicina",
+      "insurance": "Seguros",
+      "locations": "Ubicaciones",
+      "blog": "Blog",
+      "contact": "Contacto"
+    }
+  },
+  "Footer": {
+    "description": "Servicios psiquiátricos y de salud mental con compasión para niños, adultos y familias.",
+    "quickLinks": "Enlaces Rápidos",
+    "home": "Inicio",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "locations": "Ubicaciones",
+    "contactTitle": "Contacto",
+    "social": "Redes Sociales",
+    "copyright": "© 2026 Integrated Health Care Group. Todos los derechos reservados.",
+    "hipaa": "Procesos compatibles con HIPAA y estándares seguros de comunicación con pacientes."
+  },
+  "WhatsApp": {
+    "aria": "Chatear por WhatsApp",
+    "message": "Hola, me gustaría recibir más información."
+  },
+  "HomePage": {
+    "eyebrow": "Psiquiatría con compasión, progreso medible",
+    "title": "Integrated Healthcare Group",
+    "subtitle": "Atención psiquiátrica integral enfocada en estabilidad clínica, recuperación funcional y calidad de vida a largo plazo.",
+    "callButton": "Llamar (786) 536-1701",
+    "viewServices": "Ver Servicios",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Brindamos atención psiquiátrica integral."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Ser un centro de excelencia confiable en psiquiatría integral."
+    },
+    "core": {
+      "title": "Actividades Principales",
+      "items": {
+        "1": "Evaluaciones psiquiátricas integrales y reevaluaciones diagnósticas alineadas con DSM-5-TR.",
+        "2": "Manejo psicofarmacológico basado en evidencia con monitoreo continuo de respuesta y seguridad.",
+        "3": "Intervenciones psicoterapéuticas y psicosociales brindadas directamente o mediante derivaciones coordinadas.",
+        "4": "Coordinación de atención con atención primaria, hospitales, terapeutas y programas comunitarios.",
+        "5": "Manejo de poblaciones psiquiátricas complejas y de alta agudeza.",
+        "6": "Prevención de recaídas, estabilización clínica y planificación de rehabilitación funcional.",
+        "7": "Ética, mejora continua de calidad y atención orientada a resultados."
+      }
+    },
+    "reviews": {
+      "title": "Lo que dicen los pacientes",
+      "items": {
+        "1": {"author": "Reseña de Google", "text": "Atención excelente y compasiva. El equipo se toma el tiempo para escuchar y explicar claramente cada paso del tratamiento."},
+        "2": {"author": "Reseña de Google", "text": "Personal muy profesional, citas fáciles y seguimiento constante. Me sentí apoyado desde la primera visita."},
+        "3": {"author": "Reseña de Google", "text": "Atención increíble. El equipo es amable, paciente y realmente se preocupa por el bienestar emocional de cada paciente."},
+        "4": {"author": "Reseña de Google", "text": "El proveedor fue amable, muy preparado y me ayudó a encontrar un plan de tratamiento que por fin funcionó para mí."},
+        "5": {"author": "Reseña de Google", "text": "Recomiendo esta clínica 100%. Son bilingües, puntuales y muy humanos en todo el proceso."},
+        "6": {"author": "Reseña de Google", "text": "Excelente experiencia en general. La comunicación es rápida, las citas están bien organizadas y la atención se siente personalizada."}
+      }
+    },
+    "socialTitle": "Conecta con Integrated Healthcare Group",
+    "social": {
+      "whatsapp": "WhatsApp",
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "googleBusiness": "Google Business"
+    }
+  }
+}
