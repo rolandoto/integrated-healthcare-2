@@ -35,5 +35,51 @@
   "WhatsApp": {
     "aria": "Chat on WhatsApp",
     "message": "Hi, I would like to get more information."
+  },
+  "HomePage": {
+    "eyebrow": "Compassionate Psychiatry, Measurable Progress",
+    "title": "Integrated Healthcare Group",
+    "subtitle": "Comprehensive psychiatric care focused on clinical stability, functional recovery, and long-term quality of life.",
+    "callButton": "Call (786) 536-1701",
+    "viewServices": "View Services",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We provide comprehensive psychiatric care."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be a trusted center of excellence in comprehensive psychiatry."
+    },
+    "core": {
+      "title": "Core Activities",
+      "items": {
+        "1": "Comprehensive psychiatric evaluations and DSM-5-TR aligned diagnostic reassessments.",
+        "2": "Evidence-based psychopharmacologic management with ongoing response and safety monitoring.",
+        "3": "Psychotherapeutic and psychosocial interventions delivered directly or through coordinated referrals.",
+        "4": "Care coordination across primary care, hospitals, therapists, and community programs.",
+        "5": "Management of complex and high-acuity psychiatric populations.",
+        "6": "Relapse prevention, clinical stabilization, and functional rehabilitation planning.",
+        "7": "Ethics, quality improvement, and outcomes-oriented continuous care."
+      }
+    },
+    "reviews": {
+      "title": "What Patients Say",
+      "items": {
+        "1": {"author": "Google Review", "text": "Excellent and compassionate care. The team takes time to listen and explain every treatment step clearly."},
+        "2": {"author": "Google Review", "text": "Very professional staff, easy scheduling, and consistent follow-up. I felt supported from the first visit."},
+        "3": {"author": "Google Review", "text": "Amazing care. The team is kind, patient, and genuinely committed to each person's emotional well-being."},
+        "4": {"author": "Google Review", "text": "The provider was kind, knowledgeable, and helped me find a treatment plan that finally worked for me."},
+        "5": {"author": "Google Review", "text": "I highly recommend this clinic. They are bilingual, punctual, and very human throughout the process."},
+        "6": {"author": "Google Review", "text": "Great experience overall. Communication is quick, appointments are organized, and care feels personalized."}
+      }
+    },
+    "socialTitle": "Connect With Integrated Healthcare Group",
+    "social": {
+      "whatsapp": "WhatsApp",
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "googleBusiness": "Google Business"
+    }
   }
 }
