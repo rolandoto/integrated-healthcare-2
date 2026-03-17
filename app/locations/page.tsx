@@ -2,6 +2,7 @@
 import {useLocale} from 'next-intl';
 import { MapPin, Clock, Phone, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
+import Script from 'next/script';
 import PageHero from '../components/PageHero';
 import { useState } from 'react';
 import { LoadScript, GoogleMap, Marker, OverlayView } from "@react-google-maps/api";
@@ -159,9 +160,36 @@ export default function LocationsPage() {
   const locale = useLocale();
   const hero = locale === 'es' ? {title: 'Nuestras Ubicaciones', description: 'Convenientemente ubicados en todo Miami-Dade'} : {title: 'Our Locations', description: 'Conveniently located throughout Miami-Dade County'};
 
+  const getDirectionsUrl = (store: Store) =>
+    `https://www.google.com/maps/dir/?api=1&destination=${store.directionsAddress}&travelmode=driving`;
 
+  const locationsStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalClinic',
+    name: 'Integrated Healthcare',
+    url: 'https://integratedhealthcare.com/locations',
+    department: stores.map((store) => ({
+      '@type': 'MedicalClinic',
+      name: store.name,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: store.address,
+        addressLocality: 'Miami-Dade',
+        addressRegion: 'FL',
+        addressCountry: 'US',
+      },
+      hasMap: getDirectionsUrl(store),
+      telephone: store.phone,
+      openingHours: 'Mo-Sa 09:00-17:00',
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: store.lat,
+        longitude: store.lng,
+      },
+    })),
+  };
 
- const [selectedStore, setSelectedStore] = useState<Store | null>(null);
+  const [selectedStore, setSelectedStore] = useState<Store | null>(null);
   const [imgIndex, setImgIndex] = useState<number>(0);
   const [savedStores, setSavedStores] = useState<number[]>([]);
 
@@ -193,12 +221,15 @@ export default function LocationsPage() {
     setImgIndex((i) => (i - 1 + selectedStore.images.length) % selectedStore.images.length);
   };
 
-  const getDirectionsUrl = (store: Store) =>
-    `https://www.google.com/maps/dir/?api=1&destination=${store.directionsAddress}&travelmode=driving`;
-
 
   return (
     <>
+      <Script
+        id="locations-seo-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(locationsStructuredData)}}
+      />
+
       <PageHero
         title={hero.title}
         description={hero.description}
